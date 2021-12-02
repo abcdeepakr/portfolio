@@ -1,0 +1,10 @@
+.blogNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.buttonParent{
+    display: flex;
+    justify-content: center;
+}

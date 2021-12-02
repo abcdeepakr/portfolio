@@ -1,0 +1,13 @@
+.card{
+    padding: 10px 20px 10px 80px;
+}
+
+.title{
+    color: black;
+    text-decoration:underline;
+    /* font-size: 100px; */
+}
+
+.cardBody{
+    color: grey;
+}
