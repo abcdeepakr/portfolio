@@ -18,7 +18,8 @@ function Hobbies() {
 
     return (
         <React.Fragment>
-            <h1 className={styles.hobbiesTitle}><ColorLensIcon  color="error"/> I{"'"}m all about</h1>
+            <h1 className={styles.hobbiesTitle}><ColorLensIcon  color="error"/> Most of the time I talk about</h1>
+            {/* <h1 className={styles.hobbiesTitle}><ColorLensIcon  color="error"/> </h1> */}
         <div className={styles.buttons}>
             
             <div className ={styles.ButtonContainer}>
@@ -29,10 +30,10 @@ function Hobbies() {
             </div>
             
             <div className ={styles.ButtonContainer}>
-                <Button variant="outlined"  className={styles.Button} size="small"><SportsCricketIcon color="error" className ={styles.icon}/> Cricket</Button>
+                <Button variant="outlined"  className={styles.Button} size="small"><SportsCricketIcon color="error" className ={styles.icon}/>Cricket</Button>
             </div>
             <div className ={styles.ButtonContainer}>
-                <Button variant="outlined"  className={styles.Button} size="small"><RestaurantMenuIcon color="error" className ={styles.icon}/> Rajma</Button>
+                <Button variant="outlined"  className={styles.Button} size="small"><RestaurantMenuIcon color="error" className ={styles.icon}/> chole bhature</Button>
             </div>
             <br/>
             {/* <div className ={styles.ButtonContainer}>
