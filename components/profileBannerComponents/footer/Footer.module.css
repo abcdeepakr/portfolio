@@ -1,0 +1,14 @@
+.iconContainer{
+    display: flex;
+    /* padding-left: 50px; */
+    padding-top: 20px;
+    justify-content: center;
+}
+.icon{
+    padding: 10px;
+}
+
+.iconStyling{
+    font-size: 35px;
+    color: black;
+}

@@ -1,13 +1,21 @@
 .card{
-    padding: 10px 20px 10px 80px;
+    /* padding: 10px 10px 10px 10px; */
+    padding: 10px;
+    margin: 10px;
+    /* height: auto; */
+    /* width: 600px;display: flex;
+    flex-direction: row; */
 }
 
 .title{
     color: black;
-    text-decoration:underline;
+    /* text-decoration:underline; */
+    font-weight: 600;
+    font-size:26px;
     /* font-size: 100px; */
 }
 
 .cardBody{
     color: grey;
+    font-size: 18px;
 }

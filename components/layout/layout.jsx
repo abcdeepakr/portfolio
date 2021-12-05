@@ -3,7 +3,7 @@ import axios from "axios"
 
 import NavbarComponent from '../navbar/navbar'
 import Banner from '../Banner/Banner'
-
+import styles from './layout.module.css'
 
 function Layout() {
 
@@ -14,10 +14,10 @@ function Layout() {
     }, [])
     
     return (
-        <React.Fragment>
+        <div className = {styles.body}>
             <NavbarComponent />
             <Banner />
-        </React.Fragment>
+        </div>
     )
 }
 

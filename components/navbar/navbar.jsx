@@ -7,7 +7,7 @@ import styles from './navbar.module.css'
 const NavbarComponent = () => {
     return (
         <React.Fragment>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className ={styles.navbar}>
                 <Container>
                     <Navbar.Brand href="#home">Deepak Rawat</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -25,12 +25,12 @@ const NavbarComponent = () => {
                             </NavDropdown> */}
                         </Nav>
                         <Nav >
-                            <Link  href="/" ><p className = {styles.links}>Home</p></Link>
-                            <Link  href="/blogs"><p className = {styles.links}>Blog</p></Link>
-                            <Link eventKey={2} href="#photos">
+                            <Link  href="/" passHref ><p className = {styles.links}>Home</p></Link>
+                            <Link  href="/blogs" passHref><p className = {styles.links}>Blog</p></Link>
+                            <Link eventKey={2} href="/photos" passHref>
                             <p className = {styles.links}>Photos</p>
                             </Link>
-                            <Link eventKey={3} href="#projects">
+                            <Link eventKey={3} href="/projects" passHref>
                             <p className = {styles.links}>Projects</p>
                             </Link>
                         </Nav>

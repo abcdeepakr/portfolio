@@ -1,0 +1,27 @@
+.buttons{
+    display: flex;
+    justify-content: left;
+    padding: 20px 10px 0px 50px;
+    flex-wrap: wrap;
+}
+.ButtonContainer{
+    padding: 0px 10px 10px 0px;
+
+}
+.Button{
+    border-radius: 40px;
+    /* padding-left: 150px; */
+    color: black;
+    font-size: 12px;
+    
+}
+.hobbiesTitle{
+    padding: 20px 10px 0px 50px;
+    font-size: 20px;
+    font-family: "Inter var", "Inter", sans-serif;
+    font-weight: 400;
+}
+.icon{
+    padding-right: 5px;
+    font-size: 30px;
+}

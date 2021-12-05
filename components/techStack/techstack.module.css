@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* width: 100%; */
+    
+}
+
+.image{
+    padding :10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .image {
+        /* width: 100%; */
+        top: auto;
+    }
+  }

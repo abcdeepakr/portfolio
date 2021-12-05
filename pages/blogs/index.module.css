@@ -2,9 +2,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    /* padding: 50px 0px 50px 0px; */
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .buttonParent{
     display: flex;
     justify-content: center;
 }
+
+.blogBody{
+    width: auto;
+    /* margin-right: auto;
+        margin-left: auto; */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+@media only screen and (max-width: 475px) {
+    .blogBody{
+        /* display: flex;
+        flex-wrap: wrap; */
+        /* width: auto;
+        width: fit-content; */
+        margin-right: auto;
+        margin-left: auto;
+    }
+  }

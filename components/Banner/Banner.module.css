@@ -1,3 +1,49 @@
 .banner{
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.backdrop{
+    background-color: #212529;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.profileCard{
+    position: absolute;
+    top: 100px;
+    width: 40%;
+    height: 500px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+
+}
+.profileImage{
+    padding: 50px 50px 0px 50px;
+    /* border: 2px solid red; */
+}
+.username{
+    color: #212529;
+    font-family: "Inter var", "Inter", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+.name{
+    font-weight: 700;
+    font-family: "Inter var", "Inter", sans-serif;
+}
+.image{
+    border-radius:50% ;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .profileCard {
+        width: 100%;
+        top: auto;
+    }
+  }

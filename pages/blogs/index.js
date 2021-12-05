@@ -11,7 +11,7 @@ import PerceptionBlogs from "../../components/PerceptionBlogs/PerceptionBlogs";
 
 function Index() {
 
-    const [selectedBlogCategory, setSelectedBlogCategory] = useState('')
+    const [selectedBlogCategory, setSelectedBlogCategory] = useState('Perceptions')
 
     const selectedBlogCategoryHandler = (event) =>{
         console.log(event)
@@ -30,13 +30,10 @@ function Index() {
         <div style ={{padding:"10px"}}>
             <Button size="lg" variant={selectedBlogCategory === "Technical" ? "dark" : "light"} value = "Technical">Technical</Button>{' '}
         </div>
-        
-        
-          
         </div>
       </div>
 
-      {selectedBlogCategory === "Perceptions" ? <PerceptionBlogs /> :<TechnicalBlogs />}
+      {selectedBlogCategory === "Perceptions" ? <div className ={styles.blogBody}><PerceptionBlogs /></div> : <div><TechnicalBlogs /></div>}
 
     </React.Fragment>
   );

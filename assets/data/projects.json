@@ -1,0 +1,47 @@
+ {  
+    "data" : [
+         {  "id" : "wwery34",
+            "title" : "Vishwall",
+            "imageUrl" : "https://deepakr28.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1623952679505%2FFbdx554Jn.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=3840&q=75",
+            "description":"Vishwall is a website where you can gather wishes for your friends, made using ReactJS and HarperDB",
+            "liveUrl" :"https://vishwall.vercel.app/vishwall",
+            "githubUrl":"https://github.com/DeepakR-28/vishwall"
+        },
+         {   "id" : "defg2354",
+            "title" : "100 Days of Coding journal",
+            "imageUrl" : "https://i2.wp.com/letslearnabout.net/wp-content/uploads/2018/12/aaaaaaaaaaaaaaaaaaaaab.jpg?w=1200&ssl=1",
+            "description":"Created a small website to track the 100 days of coding progress when i started learning web development",
+            "liveUrl" :"https://deepakr-28.github.io/dailycodingblog/",
+            "githubUrl":"https://github.com/DeepakR-28/dailycodingblog"
+        },
+         {   "id" : "sdf342g23",
+            "title" : "Encoded Chat Application",
+            "imageUrl" : "https://www.venafi.com/sites/default/files/styles/823x390/public/content/blog/2020-12/Difference%20B%3AT%20Encryption%20%26%20Decryption.jpg?itok=yE_QC6vz",
+            "description":"A small chat application to send messages with a private key, which should be shared offline with the person you are chatting",
+            "liveUrl" :"https://deepakr-28.github.io/encodedChat/",
+            "githubUrl":"https://github.com/DeepakR-28/encodedChat"
+        },
+         {   "id" : "234234",
+            "title" : "Encode-Decode",
+            "imageUrl" : "https://content.wolfram.com/uploads/sites/39/2021/03/zodiac-cipher.png",
+            "description":"A web application to encode and decode using different algorithms like, keyword, base64, rot, morse etc...",
+            "liveUrl" :"https://deepakr-28.github.io/encode/",
+            "githubUrl":"https://github.com/DeepakR-28/encode"
+        },
+         {   "id" : "2345tegf",
+            "title" : "Balti",
+            "imageUrl" : "https://image.shutterstock.com/image-photo/bucket-list-experience-inspiration-motivation-260nw-403615447.jpg",
+            "description":"My first decent application with ReactJS which utilized a database and authentication & authorization.",
+            "liveUrl" :"https://deepakr-28.github.io/balti/",
+            "githubUrl":"https://github.com/DeepakR-28/balti"
+        },
+         {   "id" : "dfg425ew",
+            "title" : "API's",
+            "imageUrl" : "https://media.sproutsocial.com/uploads/2015/04/What-is-an-API.png",
+            "description":"First application which was built with reactjs and consumed API's. This was a beginning  of other such projects.",
+            "liveUrl" :"https://deepakr-28.github.io/weather-api-react/",
+            "githubUrl":"https://github.com/DeepakR-28/weather-api-react"
+        }
+      
+    ]
+}

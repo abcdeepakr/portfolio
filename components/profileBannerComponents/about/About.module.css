@@ -1,0 +1,17 @@
+.aboutContainer{
+    padding: 20px 10px 0px 50px;
+}
+
+.label{
+    color: black;
+    font-weight: 600;
+    font-family: "Inter var", "Inter", sans-serif;
+}
+.content{
+    padding-left: 40px;
+    font-family: "Inter var", "Inter", sans-serif;
+}
+.orgname{
+    color: #eb3b5a;
+    font-weight: 700;
+}
