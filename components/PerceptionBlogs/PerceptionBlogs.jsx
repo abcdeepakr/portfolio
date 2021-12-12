@@ -9,10 +9,10 @@ function PerceptionBlogs() {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('/api/perceptions')
             .then(res => {
-                console.log(res.data.slice(0,50))
-                setPosts(res.data.slice(0,50))
+                console.log("DATA",res.data)
+                setPosts(res.data.items)
             })
             .catch(err => console.log(err))
     }, [])
@@ -21,7 +21,7 @@ function PerceptionBlogs() {
         <div className={styles.container}>
         {posts.map(post => {
                 return (
-                <CardComponent key ={post.id} post = {post}/>
+                <CardComponent key ={post.id} perceptionBlogs = {post}/>
                 )
         })}
         </div>

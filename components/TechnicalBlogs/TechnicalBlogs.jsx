@@ -11,7 +11,7 @@ function TechnicalBlogs() {
     useEffect(() => {
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(res => {
-                console.log(res.data)
+                // console.log(res.data)
                 setPosts(res.data.slice(51,99))
             })
             .catch(err => console.log(err))
