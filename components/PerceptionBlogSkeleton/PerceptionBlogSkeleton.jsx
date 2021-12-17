@@ -1,24 +1,24 @@
 import React from 'react'
 import NavbarComponent from '../navbar/navbar'
-import styles from './BlogSkeleton.module.css'
+import styles from './PerceptionBlogSkeleton.module.css'
 const { htmlToText } = require('html-to-text');
 
-function BlogSkeleton(props) {
+function PerceptionBlogSkeleton(props) {
 
-    
+    console.log("in skeleton : ", props.post)
 
     const convert = (content) =>{
-        // const text = htmlToText(content, {
-        //     wordwrap: 130
-        // });
-        // return text
-        var html = content
-        var strippedHtml = html.replace(/<[^>]+>/g, '');
-        var final  = strippedHtml.replace(/&nbsp;/g, ' ');
+
+        console.log("BEFORE REPLACING :",content)
+        let breaksRemoved = content.replace(/(?:<br \/>|<br>)/g, "\n");
+        console.log("BREAKS REPLACED : ",breaksRemoved)
+        let removedHeader = breaksRemoved.replace(/(?:\<h1(.*)\>(.*)\<\/h1\>|&nbsp;)/g, '');
+        console.log("REMOVED HEADER : ",removedHeader)
+        var strippedHtml = removedHeader.replace(/<[^>]+>/g, '');
+        console.log(strippedHtml)
+        
         return strippedHtml
     }
-
-    
     
     return (
         <React.Fragment>
@@ -36,4 +36,4 @@ function BlogSkeleton(props) {
     )
 }
 
-export default BlogSkeleton
+export default PerceptionBlogSkeleton

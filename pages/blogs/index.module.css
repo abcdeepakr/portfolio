@@ -28,3 +28,10 @@
         margin-left: auto;
     }
   }
+
+  .spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 50px 0px;
+  }

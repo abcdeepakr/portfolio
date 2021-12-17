@@ -21,7 +21,7 @@ function PerceptionBlogs() {
         <div className={styles.container}>
         {posts.map(post => {
                 return (
-                <CardComponent key ={post.id} perceptionBlogs = {post}/>
+                <CardComponent key ={post.id} blog = {post} origin="perception"/>
                 )
         })}
         </div>

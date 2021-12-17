@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    animation: display 1s;
+    animation: display 0.5s;
     cursor: pointer;
 }
 

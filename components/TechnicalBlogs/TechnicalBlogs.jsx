@@ -23,7 +23,7 @@ function TechnicalBlogs() {
         <div className={styles.container}>
         {posts.map(post => {
                 return (
-                <CardComponent key ={post.id} post = {post}/>
+                <CardComponent key ={post.id} blog = {post} origin="technical"/>
                 )
         })}
         </div>

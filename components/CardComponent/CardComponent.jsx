@@ -5,7 +5,7 @@ import { Card } from "react-bootstrap";
 import styles from './CardComponent.module.css'
 
 function CardComponent(props) {
-    // console.log("CARDS COMPONENT l\:",props.perceptionBlogs)
+    console.log("CARD origin\:",props.origin)
     return (
 
 
@@ -20,27 +20,30 @@ function CardComponent(props) {
                 
                 <Card.Body>
                     <Card.Title > <Link href={{
-                        pathname: `/blogs/${props.perceptionBlogs.title.replace(/\s+/g, "-")}`,
-                        query: props.perceptionBlogs
+                        pathname: `/blogs/${props.blog.title.replace(/\s+/g, "-")}`,
+                        query: {
+                            slug : props.blog.slug,
+                            type : props.origin
+                        }
                     }}
-                        as={`/blogs/${props.perceptionBlogs.title.replace(/\s+/g, "-")}`}
-                        passHref ><p className={styles.title}>{props.perceptionBlogs.title}</p></Link> 
+                        as={`/blogs/${props.blog.title.replace(/\s+/g, "-")}?type=${props.origin}`}
+                        passHref ><p className={styles.title}>{props.blog.title}</p></Link> 
                     </Card.Title>
-                    <Card.Text>
+                    {/* <Card.Text>
                         <Link passHref
                             href={{
-                                pathname: `/blogs/${props.perceptionBlogs.title.replace(/\s+/g, "-")}`,
-                                query: props.perceptionBlogs
+                                pathname: `/blogs/${props.blog.title.replace(/\s+/g, "-")}`,
+                                query: props.blog
                             }}
-                            as={`/blogs/${props.perceptionBlogs.title.replace(/\s+/g, "-")}`}
+                            as={`/blogs/${props.blog.title.replace(/\s+/g, "-")}`}
 
-                        // href={`/blogs/${props.perceptionBlogs.title.replace(/\s+/g,"-")}`} 
+                        // href={`/blogs/${props.blog.title.replace(/\s+/g,"-")}`} 
                         >
-                            <p className={styles.cardBody}>{props.perceptionBlogs.body}</p>
+                            <p className={styles.cardBody}>{props.blog.body}</p>
 
 
                         </Link>
-                    </Card.Text>
+                    </Card.Text> */}
                 </Card.Body>
             </Card>
 
