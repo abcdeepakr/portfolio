@@ -9,7 +9,7 @@ function About() {
         <React.Fragment>
             <div className ={styles.aboutContainer}>
                 <label className={styles.label}>Previous: </label>
-                <p className ={styles.content}>Customer Feedback Analyis using NLP with Python <h6 className={styles.orgname}>@Ugam Solutions</h6> </p>
+                <p className ={styles.content}>Feedback Analyis using NLP with Python <h6 className={styles.orgname}>@Ugam Solutions</h6> </p>
                 <label className={styles.label}>Current: </label>
                 <p className ={styles.content}>Software Development with a little bit of everything <p className={styles.orgname}>@The Peripheral Store</p></p>
                 <label className={styles.label}>Next: </label>
