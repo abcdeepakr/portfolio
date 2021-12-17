@@ -18,8 +18,8 @@ function CardComponent(props) {
                 className={styles.card}
                 >
                 
-                <Card.Body>
-                    <Card.Title > <Link href={{
+                <>
+                    < > <Link href={{
                         pathname: `/blogs/${props.blog.title.replace(/\s+/g, "-")}`,
                         query: {
                             slug : props.blog.slug,
@@ -28,7 +28,7 @@ function CardComponent(props) {
                     }}
                         as={`/blogs/${props.blog.title.replace(/\s+/g, "-")}?type=${props.origin}`}
                         passHref ><p className={styles.title}>{props.blog.title}</p></Link> 
-                    </Card.Title>
+                    </>
                     {/* <Card.Text>
                         <Link passHref
                             href={{
@@ -44,7 +44,7 @@ function CardComponent(props) {
 
                         </Link>
                     </Card.Text> */}
-                </Card.Body>
+                </>
             </Card>
 
     );

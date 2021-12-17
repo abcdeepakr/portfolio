@@ -18,4 +18,33 @@
 .cardBody{
     color: grey;
     font-size: 18px;
+    padding: 10px;
 }
+
+
+@media only screen and (max-width: 475px) {
+    .card{
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        height: 10px;
+        /* height: auto; */
+        
+    }
+    .title{
+        color: black;
+        text-decoration:underline;
+        font-weight: 400;
+        font-size:20px;
+        /* text-decoration: underline; */
+        
+        /* font-size: 100px; */
+    }
+    /* .cardBody{
+        color: grey;
+        font-size: 18px;
+        padding: 2px;
+    } */
+    
+    
+  }
