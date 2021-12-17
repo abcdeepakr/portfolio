@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Banner.module.css'
 import Image from 'next/image'
 import Link from '@mui/material/Link';
-// import x from '../../assets/images/profile.png'
+
 
 import Hobbies from '../profileBannerComponents/hobbies/Hobbies'
 import About from '../profileBannerComponents/about/About'
