@@ -2,7 +2,7 @@
 title: "cun-cis-ten-see"
 date: 'Dec 12, 2021'
 excerpt: 'After moving to Wellington in 2015 I had this realization, I was in awe of peoples skills in...'
-cover_image: 'cun-cis-ten-see-head.jpg'
+cover_image: 'images/contentImages/cun-cis-ten-see-head.jpg'
 area: 'perceptions'
 ---
 
