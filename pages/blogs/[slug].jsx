@@ -6,6 +6,7 @@ import { marked } from 'marked'
 import Link from 'next/link'
 import styles from './index.module.css'
 import NavbarComponent from '../../components/navbar/navbar'
+import Image from 'next/image'
 export async function getStaticPaths() {
     const files = fs.readdirSync(path.join('posts'))
     const paths = files.map((filename) => ({
@@ -54,7 +55,7 @@ const Post = ({
                 <div className={styles.container}>
                     <h1 className={styles.post_title}>{title}</h1>
                     <div className='post-date'>Posted on {date}</div>
-                    <img src={cover_image} alt='' />
+                    <Image src={cover_image} alt='' />
                     <div className='post-body'>
                         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
                     </div>
