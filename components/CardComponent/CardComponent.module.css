@@ -2,9 +2,10 @@
     /* padding: 10px 10px 10px 10px; */
     padding: 10px;
     margin: 10px;
-    /* height: auto; */
+    height: auto;
     /* width: 600px;display: flex;
     flex-direction: row; */
+    
 }
 
 .title{
@@ -19,7 +20,20 @@
     color: grey;
     font-size: 18px;
     padding: 10px;
+    flex: 50%;
 }
+.btn {
+    display: none;
+    /* background: black; */
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+  }
 
 
 @media only screen and (max-width: 475px) {
@@ -28,18 +42,31 @@
         margin: 0px;
         border: 0px;
         height: 10px;
+        padding-bottom: 20px;
         /* height: auto; */
-        
     }
+    .post_date {
+        /* background: #f4f4f4; */
+        /* margin-bottom: 20px; */
+        margin-top: 0px;
+        position: absolute;
+        bottom: 20px;
+        left: 2%;
+        
+      }
     .title{
         color: black;
         text-decoration:underline;
         font-weight: 400;
         font-size:20px;
-        /* text-decoration: underline; */
-        
-        /* font-size: 100px; */
     }
+    .excerpt{
+        display: none;
+      }
+      .btn {
+        
+        display: none;
+      }
     /* .cardBody{
         color: grey;
         font-size: 18px;

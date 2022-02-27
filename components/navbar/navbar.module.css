@@ -1,7 +1,14 @@
 .links{
     padding:10px 10px 0px 10px;
-    color : grey;
+    color : white;
     cursor:pointer;
+}
+.links:visited {
+    color: grey;
+    padding:10px 10px 0px 10px;
+    color : white;
+    cursor:pointer;
+    
 }
 
 .navbar{

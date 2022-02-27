@@ -1,53 +1,65 @@
 import React, { useEffect, useState } from 'react'
-import PerceptionBlogSkeleton from '../../components/PerceptionBlogSkeleton/PerceptionBlogSkeleton'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import { marked } from 'marked'
+import Link from 'next/link'
 import styles from './index.module.css'
-
-import { useRouter } from 'next/router'
-import axios from 'axios'
-
-import Stack from '@mui/material/Stack';
-import CircularProgress from '@mui/material/CircularProgress';
-
-
-export const getServerSideProps = async (context) => {
-    console.log("CONTEXT", context.query)
-
-
-
+import NavbarComponent from '../../components/navbar/navbar'
+export async function getStaticPaths() {
+    const files = fs.readdirSync(path.join('posts'))
+    const paths = files.map((filename) => ({
+        params: {
+            slug: filename.replace('.md', ''),
+        },
+    }))
     return {
-        props: {
-            post: { "slug": context.query.slug } //pass it to the page props
-        }
+        paths,
+        fallback: false,
     }
 }
 
-const Post = (props) => {
-    const router = useRouter()
-    console.log(router)
-    const { slug, type } = router.query
 
-    const [post, setPost] = useState({})
+export async function getStaticProps({ params: { slug } }) {
+    // console.log(params)
+    const markdownWithMeta = fs.readFileSync(
+        path.join('posts', slug + '.md'),
+        'utf-8'
+    )
+    // console.log(markdownWithMeta)
+    const { data: frontmatter, content } = matter(markdownWithMeta)
+    return {
+        props: {
+            frontmatter,
+            slug,
+            content,
+        },
+    }
+}
 
-    useEffect(() => {
-        console.log(slug)
-        axios.get(`/api/perceptions?slug=${props.post.slug}`)
-            .then(res => {
-                setPost(res.data[0])
-                console.log("FOUND : ", res.data)
-            })
-            .catch(err => console.log(err))
-
-    }, [])
+const Post = ({
+    frontmatter: { title, date, cover_image },
+    slug,
+    content,
+}) => {
+    
     return (
         <div >
-            {Object.keys(post).length > 0 ? <PerceptionBlogSkeleton title={slug} post={post} /> : (
-                <div className={styles.spinner}>
-                    <Stack sx={{ color: 'green.500' }} spacing={2} direction="row">
-                        <CircularProgress color="success" />
-                    </Stack>
+            <NavbarComponent/>
+            <>
+                <Link href='/blogs'>
+                    <a className='btn btn-back'>back</a>
+                </Link>
+                {/* <div className='card card-page'> */}
+                <div className={styles.container}>
+                    <h1 className={styles.post_title}>{title}</h1>
+                    <div className='post-date'>Posted on {date}</div>
+                    <img src={cover_image} alt='' />
+                    <div className='post-body'>
+                        <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+                    </div>
                 </div>
-
-            )}
+            </>
         </div>
 
 

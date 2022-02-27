@@ -4,6 +4,7 @@
     justify-content: center;
     animation: display 0.5s;
     cursor: pointer;
+
 }
 
 @keyframes display{

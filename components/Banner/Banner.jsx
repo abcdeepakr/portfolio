@@ -3,7 +3,6 @@ import styles from './Banner.module.css'
 import Image from 'next/image'
 import Link from '@mui/material/Link';
 
-
 import Hobbies from '../profileBannerComponents/hobbies/Hobbies'
 import About from '../profileBannerComponents/about/About'
 import Footer from '../profileBannerComponents/footer/Footer'

@@ -4,28 +4,20 @@ import axios from 'axios'
 import CardComponent from '../CardComponent/CardComponent'
 import styles from './PerceptionBlogs.module.css'
 
-function PerceptionBlogs() {
+function PerceptionBlogs(props) {
+    console.log("posts in perception blogs", props.posts)
 
-    const [posts, setPosts] = useState([])
-
-    useEffect(() => {
-        axios.get('/api/perceptions')
-            .then(res => {
-                console.log("DATA",res.data)
-                setPosts(res.data.items)
-            })
-            .catch(err => console.log(err))
-    }, [])
-
-    return posts.length > 0 ? (
+    return props.posts.length > 0 ? (
         <div className={styles.container}>
-        {posts.map(post => {
-                return (
-                <CardComponent key ={post.id} blog = {post} origin="perception"/>
-                )
-        })}
+            {props.posts.map(post => {
+                if (post.frontmatter.area === "perceptions") {
+                    return (
+                        <CardComponent key={post.frontmatter.title} blog={post} />
+                    )
+                }
+            })}
         </div>
-        
+
     ) : null
 }
 

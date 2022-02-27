@@ -14,7 +14,6 @@ import Link from "@mui/material/Link";
 import TechStack from "../../components/techStack/TechStack";
 
 function Projects() {
-  console.log(projects);
 
   return (
     <div>

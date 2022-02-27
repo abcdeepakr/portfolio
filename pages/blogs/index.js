@@ -4,18 +4,25 @@ import NavbarComponent from "../../components/navbar/navbar";
 import Link from "next/link";
 import CardComponent from "../../components/CardComponent/CardComponent";
 import { Nav, Button } from "react-bootstrap";
-
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import { sortByDate } from '../../utils'
+// import Head from 'next/head'
+// import Post from '../components/Post'
+// import { sortByDate } from '../utils'
 
 import styles from './index.module.css'
 import TechnicalBlogs from "../../components/TechnicalBlogs/TechnicalBlogs";
 import PerceptionBlogs from "../../components/PerceptionBlogs/PerceptionBlogs";
 
-function Index() {
+function Index(props) {
+  
 
     const [selectedBlogCategory, setSelectedBlogCategory] = useState('Perceptions')
 
     const selectedBlogCategoryHandler = (event) =>{
-        console.log(event)
+
         setSelectedBlogCategory(event.target.value)
     }
 
@@ -39,10 +46,42 @@ function Index() {
         </div>
       </div>
 
-      {selectedBlogCategory === "Perceptions" ? <div className ={styles.blogBody}><PerceptionBlogs /></div> : <div><TechnicalBlogs /></div>}
+      {selectedBlogCategory === "Perceptions" ?
+       <div className ={styles.blogBody}><PerceptionBlogs posts={props.posts} /></div> :
+      <div><TechnicalBlogs posts={props.posts}/></div>}
 
     </React.Fragment>
   );
 }
+
+
+
+export async function getStaticProps() {
+  // Get files from the posts dir
+  const files = fs.readdirSync(path.join('posts'))
+
+  const posts = files.map((filename) => {
+    // Create slug
+    const slug = filename.replace('.md', '')
+
+    // Get frontmatter
+    const markdownWithMeta = fs.readFileSync(
+      path.join('posts', filename),
+      'utf-8'
+    )
+
+    const { data: frontmatter } = matter(markdownWithMeta)
+    return {
+      slug,
+      frontmatter,
+    }
+  })
+  return {
+    props: {
+      posts: posts.sort(sortByDate),
+    },
+  }
+}
+
 
 export default Index;
