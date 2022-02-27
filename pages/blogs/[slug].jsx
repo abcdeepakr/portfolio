@@ -55,7 +55,7 @@ const Post = ({
                 <div className={styles.container}>
                     <h1 className={styles.post_title}>{title}</h1>
                     <div className='post-date'>Posted on {date}</div>
-                    <Image src={cover_image} alt='' />
+                    {/* <Image src={cover_image} alt=''  width = {10} height={10} /> */}
                     <div className='post-body'>
                         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
                     </div>
