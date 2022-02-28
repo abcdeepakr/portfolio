@@ -1,0 +1,87 @@
+.modal{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    animation: modalOpen 0.5s none 0s 1 linear;
+    transition: 1s;
+}
+.modal_content{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+    /* max-height: 1200px; */
+  }
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    animation: modalOpen 0.5s none 0s 1 linear;
+    cursor: pointer;
+  }
+
+  .left{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 1s;
+  }
+  .right{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  @keyframes modalOpen {
+      0%{
+        opacity: 0%;
+      }
+      10%{
+        opacity: 10%;
+    }
+    20%{
+        opacity: 20%;
+    }
+    30%{
+        opacity: 30%;
+      }
+    40%{
+        opacity: 40%;
+    }
+    50%{
+        opacity: 50%;
+      }
+      60%{
+        opacity: 60%;
+    }
+    70%{
+        opacity: 70%;
+    }
+    80%{
+        opacity: 80%;
+      }
+    90%{
+        opacity: 90%;
+    }
+    100%{
+        opacity: 100%;
+    }
+  }

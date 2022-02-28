@@ -1,71 +1,37 @@
-import * as React from 'react';
-import { styled, Box } from '@mui/system';
-import ModalUnstyled from '@mui/base/ModalUnstyled';
-import Link from '@mui/material/Link';
+import React,{useState } from 'react';
+
 import NavbarComponent from '../../components/navbar/navbar';
-
+import styles from './images.module.css'
+import ImageModal from '../../components/ImageModal/ImageModal'
+import images from '../../assets/data/images.json'
 function Photos() {
-
+  
+  const [showModal, setShowModal] = useState(false)
+  const [currImage, setCurrImage] = useState('')
+  const imageClick =(e, imageData) =>{
+    setShowModal(!showModal)
+    if(imageData){
+      setCurrImage(imageData)
+    }
     
-    const StyledModal = styled(ModalUnstyled)`
-    position: fixed;
-    z-index: 1300;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    background-color: white;
-  `;
-  
-  const Backdrop = styled('div')`
-    z-index: -1;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    -webkit-tap-highlight-color: transparent;
-  `;
-  const style = {
-    width: 400,
-    bgcolor: 'white',
-    border: '2px solid #000',
-    p: 2,
-    px: 4,
-    pb: 3,
-  };
-  
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+  }
     return (
         <React.Fragment>
             <NavbarComponent />
-         {/* <button type="button" onClick={handleOpen}>
-        Open modal
-      </button>
-      <StyledModal
-        aria-labelledby="unstyled-modal-title"
-        aria-describedby="unstyled-modal-description"
-        open={open}
-        onClose={handleClose}
-        BackdropComponent={Backdrop}
-      >
-        <Box sx={style}>
-          <h2 id="unstyled-modal-title">Text in a modal</h2>
-          <p id="unstyled-modal-description">Aliquid amet deserunt earum!</p>
-        </Box>
-      </StyledModal> */}
-      <div style = {{display:"flex", justifyContent:"center", alignItems:"50%"}}>
+      {/* <div style = {{display:"flex", justifyContent:"center", alignItems:"50%"}}>
         <h6 > {'"Will update by EOD"'}</h6> <br/>
       </div>
-      <p style = {{display:"flex", justifyContent:"center"}}> Check out my {" "} <Link href ="https://www.pexels.com/@deepak-rawat-1493821" target= "_blank"> Pexels{" "} </Link> or{" "} <Link target= "_blank" href ="https://www.instagram.com/deepak.r28/">Insta </Link> </p>
+      <p style = {{display:"flex", justifyContent:"center"}}> Check out my {" "} <Link href ="https://www.pexels.com/@deepak-rawat-1493821" target= "_blank"> Pexels{" "} </Link> or{" "} <Link target= "_blank" href ="https://www.instagram.com/deepak.r28/">Insta </Link> </p> */}
+        <div className={styles.container}>
+          {images.data.map(imageData =>{
+              return(
+                <div className={styles.imageThumbContainer} key = {imageData.id}>
+                  <img src={imageData.imageUrl} className={styles.imageThumb} alt="some image" onClick={(e)=>imageClick(e, imageData)}/>
+            </div>
+              )
+          })}
+        </div>
+        <ImageModal show={showModal} closeModal={() => imageClick()} imageData={currImage} images={images.data}/>
         </React.Fragment>
       );
     }

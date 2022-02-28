@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: px;
+    flex-shrink: inherit;
+    align-items: center;
+    justify-content: center;
+}
+.imageThumbContainer{
+    max-width:100%;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%;
+  background-position:center;
+}
+.imageThumb{
+    width:300px;
+    height:150px;
+    object-fit:cover;
+    border-radius: 0px;
+    background-position:center;
+}
