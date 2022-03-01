@@ -31,7 +31,7 @@ function Index(props) {
           <Head>
         <title>Deepak Rawat | Blogs</title>
         <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/profile.jpg" />
       </Head>
       <NavbarComponent />
       <div className={styles.blogNav}>

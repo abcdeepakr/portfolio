@@ -18,7 +18,7 @@ function Hobbies() {
 
     return (
         <React.Fragment>
-            <h1 className={styles.hobbiesTitle}><ColorLensIcon  color="error"/>I like</h1>
+            {/* <h1 className={styles.hobbiesTitle}><ColorLensIcon  color="error"/>I like</h1> */}
             {/* <h1 className={styles.hobbiesTitle}><ColorLensIcon  color="error"/> </h1> */}
         <div className={styles.buttons}>
             
