@@ -20,7 +20,7 @@ const sortImages =(event) =>{
         style={{ maxHeight: '400px' }}
         navbarScroll
       >
-        <Nav.Link href="#monochrome" title="monochrome" onClick={(e) => sortImages(e)}>Black & White</Nav.Link>
+        <Nav.Link href="#monochrome" title="monochrome" onClick={(e) => sortImages(e)}>Monochrome</Nav.Link>
         <Nav.Link href="#street" title="street" onClick={(e) => sortImages(e)}>Street</Nav.Link>
         <Nav.Link href="#people" title="people" onClick={(e) => sortImages(e)}>People</Nav.Link>
         <Nav.Link href="#silhouette" title="silhouette" onClick={(e) => sortImages(e)}>Silhouette</Nav.Link>
