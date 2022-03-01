@@ -10,15 +10,16 @@ const sortImages =(event) =>{
   return (
       
     <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" collapseOnSelect= "true">
   <Container fluid>
     <Navbar.Brand href="#" title="all" onClick={(e) => sortImages(e)}>Photos</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" className={styles.NavbarIcon}><CameraAltIcon color="success" fontSize="large" /></Navbar.Toggle>
-    <Navbar.Collapse id="navbarScroll">
+    <Navbar.Collapse id="navbarScroll" >
       <Nav
         className="me-auto my-2 my-lg-0"
         style={{ maxHeight: '400px' }}
         navbarScroll
+        
       >
         <Nav.Link href="#monochrome" title="monochrome" onClick={(e) => sortImages(e)}>Monochrome</Nav.Link>
         <Nav.Link href="#street" title="street" onClick={(e) => sortImages(e)}>Street</Nav.Link>
