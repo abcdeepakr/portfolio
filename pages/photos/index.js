@@ -127,7 +127,7 @@ function Photos() {
               )
           })}
         </div>
-        <ImageModal show={showModal} closeModal={() => imageClick()} imageData={currImage} images={images}/>
+        <ImageModal show={showModal} closeModal={() => imageClick()} imageData={currImage} images={sortedImages}/>
         <div  className={styles.spinner}>
         {loading?<Spinner animation="border"/>: null }
         </div>
