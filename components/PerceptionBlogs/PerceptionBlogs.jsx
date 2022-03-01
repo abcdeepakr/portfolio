@@ -5,7 +5,6 @@ import CardComponent from '../CardComponent/CardComponent'
 import styles from './PerceptionBlogs.module.css'
 
 function PerceptionBlogs(props) {
-    console.log("posts in perception blogs", props.posts)
 
     return props.posts.length > 0 ? (
         <div className={styles.container}>

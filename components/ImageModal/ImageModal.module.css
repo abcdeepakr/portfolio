@@ -15,9 +15,15 @@
 .modal_content{
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 1200px;
+    /* width: auto; */
+    max-width: 80%;
+    max-height: 95%;
+    object-fit:contain;
+    /* height: 100vh;
+    width: 50vw; */
+    /* height: auto; */
     /* max-height: 1200px; */
+    animation: display 1s;
   }
   .close {
     position: absolute;
@@ -39,6 +45,7 @@
     font-size: 40px;
     font-weight: bold;
     transition: 1s;
+    cursor: pointer;
   }
   .right{
     position: absolute;
@@ -47,7 +54,8 @@
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 1s;
+    cursor: pointer;
   }
 
   @keyframes modalOpen {
@@ -83,5 +91,43 @@
     }
     100%{
         opacity: 100%;
+    }
+  }
+@keyframes display {
+  0%{
+    opacity: 0%;
+  }
+  50%{
+    opacity: 50%;
+}
+100%{
+    opacity: 100%;
+}
+}
+  @media only screen and (max-width: 600px) {
+    .modal_content{
+      margin: auto;
+      
+      max-width: 95%;
+      max-height: 100%;
+      object-fit:contain;
+      position: absolute;
+      display: flex;
+      padding: 8%;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%);
+      zoom: normal;
+    }
+    .left{
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 1s;
+      cursor: pointer;
+      z-index: 10;
     }
   }
