@@ -1,4 +1,5 @@
 import React,{useEffect, useState } from 'react';
+import Head from 'next/head'
 import axios from 'axios'
 import {Spinner } from 'react-bootstrap'
 import NavbarComponent from '../../components/navbar/navbar';
@@ -101,6 +102,11 @@ function Photos() {
 
     return (
         <React.Fragment>
+           <Head>
+        <title>Deepak Rawat | Photos</title>
+        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
             <NavbarComponent />
             <PhotoFilters sort = {(filter) => sortImages(filter)}/>
       {/* <div style = {{display:"flex", justifyContent:"center", alignItems:"50%"}}>
