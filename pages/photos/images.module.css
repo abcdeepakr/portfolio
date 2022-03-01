@@ -52,3 +52,14 @@
         opacity: 100%;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .imageThumb{
+        width:150px;
+        height:75px;
+        object-fit:cover;
+        border-radius: 0px;
+        background-position:center;
+        animation: display 1s;
+    }
+}

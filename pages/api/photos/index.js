@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
     const data =  await imagekit.listFiles({
         skip : 0,
-        limit : 50
+        limit : 100
     }, function(error, result) { 
         if(error){
             res.status(400).json(error)  
