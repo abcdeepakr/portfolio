@@ -18,7 +18,7 @@ function Photos() {
     setLoading(true)
     axios.get('/api/photos')
     .then(response => {
-      console.log(response.data)
+      // console.log(response.data)
       setImages(response.data)
       setSortedImages(response.data)
       setLoading(false)
@@ -39,7 +39,6 @@ function Photos() {
   }
 
   const sortImages = (filterType) =>{
-    console.log(filterType)
     switch(filterType){
       case "monochrome" :
             let sortedMonochromeImages = [...images].filter(image =>{
@@ -47,7 +46,6 @@ function Photos() {
                 return image
               }
             })
-            console.log("monochrome images : ", sortedMonochromeImages)
             setSortedImages(sortedMonochromeImages)
             break
       case "street" :
@@ -74,7 +72,7 @@ function Photos() {
             return image
           }
         })
-        console.log("monochrome images : ", sortedMonochromeImages)
+        // console.log("monochrome images : ", sortedMonochromeImages)
         setSortedImages(sortedSilhouetteImages)
         break
       case "landscape" :
@@ -116,7 +114,6 @@ function Photos() {
             newThumnailTransformRule[2] = "tr:n-og_thumb"
             let newPath = newThumnailTransformRule.join('/')
             let newThumbUrl=thumbUrl.origin + newPath
-            console.log(newThumbUrl)
               return(
                 <div className={styles.imageThumbContainer} key = {imageData.fileId}>
                   <img src={newThumbUrl} className={styles.imageThumb} alt="some image" onClick={(e)=>imageClick(e, imageData)}/>
