@@ -18,7 +18,7 @@
 .hobbiesTitle{
     padding: 20px 10px 0px 50px;
     font-size: 20px;
-    font-family: "Inter var", "Inter", sans-serif;
+    font-family:monospace;
     font-weight: 400;
 }
 .icon{

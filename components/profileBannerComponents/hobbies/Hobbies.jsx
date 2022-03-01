@@ -18,7 +18,7 @@ function Hobbies() {
 
     return (
         <React.Fragment>
-            <h1 className={styles.hobbiesTitle}><ColorLensIcon  color="error"/>Things I like</h1>
+            <h1 className={styles.hobbiesTitle}><ColorLensIcon  color="error"/>I like</h1>
             {/* <h1 className={styles.hobbiesTitle}><ColorLensIcon  color="error"/> </h1> */}
         <div className={styles.buttons}>
             
@@ -33,14 +33,14 @@ function Hobbies() {
                 <Button variant="outlined"  className={styles.Button} size="small"><SportsCricketIcon color="error" className ={styles.icon}/>Cricket</Button>
             </div>
             <div className ={styles.ButtonContainer}>
-                <Button variant="outlined"  className={styles.Button} size="small"><RestaurantMenuIcon color="error" className ={styles.icon}/> chole bhature</Button>
+                <Button variant="outlined"  className={styles.Button} size="small"><RestaurantMenuIcon color="error" className ={styles.icon}/> bhole chature</Button>
             </div>
             <br/>
             {/* <div className ={styles.ButtonContainer}>
                 <Button variant="outlined"  className={styles.Button}>Delhi Metro</Button>
             </div> */}
             <div className ={styles.ButtonContainer}>
-                <Button variant="outlined"  className={styles.Button} size ="small"><CodeIcon color="disabled" className ={styles.icon} /> coding shoding</Button>
+                <Button variant="outlined"  className={styles.Button} size ="small"><CodeIcon color="disabled" className ={styles.icon} /> Building</Button>
             </div>
             <div className ={styles.ButtonContainer}>
                 <Button variant="outlined"  className={styles.Button} ><LocationCityIcon color="warning" className ={styles.icon}/> Delhi</Button>
