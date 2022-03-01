@@ -111,9 +111,15 @@ function Photos() {
       <p style = {{display:"flex", justifyContent:"center"}}> Check out my {" "} <Link href ="https://www.pexels.com/@deepak-rawat-1493821" target= "_blank"> Pexels{" "} </Link> or{" "} <Link target= "_blank" href ="https://www.instagram.com/deepak.r28/">Insta </Link> </p> */}
         <div className={styles.container}>
           {sortedImages.map(imageData =>{
+            let thumbUrl = new URL(imageData.thumbnail)
+            let newThumnailTransformRule = thumbUrl.pathname.split("/")
+            newThumnailTransformRule[2] = "tr:n-og_thumb"
+            let newPath = newThumnailTransformRule.join('/')
+            let newThumbUrl=thumbUrl.origin + newPath
+            console.log(newThumbUrl)
               return(
                 <div className={styles.imageThumbContainer} key = {imageData.fileId}>
-                  <img src={imageData.thumbnail} className={styles.imageThumb} alt="some image" onClick={(e)=>imageClick(e, imageData)}/>
+                  <img src={newThumbUrl} className={styles.imageThumb} alt="some image" onClick={(e)=>imageClick(e, imageData)}/>
             </div>
               )
           })}
