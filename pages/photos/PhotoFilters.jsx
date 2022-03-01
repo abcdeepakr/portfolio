@@ -12,7 +12,7 @@ const sortImages =(event) =>{
     <div>
         <Navbar bg="light" expand="lg">
   <Container fluid>
-    <Navbar.Brand href="#" title="all" onClick={(e) => sortImages(e)>Photos</Navbar.Brand>
+    <Navbar.Brand href="#" title="all" onClick={(e) => sortImages(e)}>Photos</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" className={styles.NavbarIcon}><CameraAltIcon color="success" fontSize="large" /></Navbar.Toggle>
     <Navbar.Collapse id="navbarScroll">
       <Nav
