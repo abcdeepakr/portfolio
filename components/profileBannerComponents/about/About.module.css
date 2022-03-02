@@ -16,3 +16,11 @@
     color: #eb3b5a;
     font-weight: 700;
 }
+
+.message{
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+    /* font-weight: 600; */
+    /* font-family: "Inter var", "Inter", sans-serif; */
+}
