@@ -18,7 +18,7 @@ function About() {
                 <br></br>
                 <br></br>
                 <h3 className={styles.message}>Hello anon | 
-                    <a  href="https://secret.viralsachxd.com/ea088d94b" 
+                    <a  href="https://secret.evenjust.com/c85ae4a8c" 
                                     target="_blank" rel="noreferrer">
                         <MailOutlineIcon fontSize='medium' color="primary" style={{paddingLeft:"2px"}} /> 
                     </a>
