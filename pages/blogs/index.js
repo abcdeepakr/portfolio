@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Head from 'next/head'
-import NavbarComponent from "../../components/navbar/navbar";
+
 import Script from "next/script";
 import { Button } from "react-bootstrap";
 import fs from 'fs'
@@ -41,7 +41,6 @@ function Index(props) {
           `
         }
       </Script>
-      <NavbarComponent />
       <div className={styles.blogNav}>
 
         <div variant="pills" onClick={(e) => selectedBlogCategoryHandler(e)} style={{ width: "20%" }} className={styles.buttonParent}>

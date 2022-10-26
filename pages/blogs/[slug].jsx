@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 import { marked } from 'marked'
 import Link from 'next/link'
 import styles from './index.module.css'
-import NavbarComponent from '../../components/navbar/navbar'
+
 import Image from 'next/image'
 export async function getStaticPaths() {
     const files = fs.readdirSync(path.join('posts'))
@@ -46,7 +46,6 @@ const Post = ({
     
     return (
         <div >
-            <NavbarComponent/>
             <>
                 <Link href='/blogs'>
                     <a className='btn btn-back'>back</a>

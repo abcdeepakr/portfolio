@@ -19,13 +19,10 @@ function Banner() {
                     <Image src="/profile.jpg" alt="profile" width="100px" height="100px" className  ={styles.image}/>
                     <h3 className={styles.name}>Deepak Rawat  </h3>
                     <h6 >
-                        <Link href="https://www.google.com/search?client=firefox-b-d&q=deepakr28" 
-                              target="_blank" 
-                              className={styles.username}>@deepak.r28 </Link> | 
-                              <LocationOnIcon color="error" /> Delhi
-                              </h6>
+                        <span className={styles.username}>@deepakr28 | Delhi Metro Enthusiast
+                        </span>
+                    </h6>
                 </div>
-
                 <Hobbies />
                 <About />
                 <Footer />

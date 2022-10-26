@@ -1,5 +1,5 @@
 import * as React from "react";
-import NavbarComponent from "../../components/navbar/navbar";
+
 import projects from "../../assets/data/projects.json";
 
 import Card from "@mui/material/Card";
@@ -17,8 +17,6 @@ function Projects() {
 
   return (
     <div>
-      <NavbarComponent />
-
       <div className={styles.container}>
         {projects.data.map((project) => {
           return (

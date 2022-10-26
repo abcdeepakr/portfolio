@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head'
 import axios from 'axios'
 import { Spinner } from 'react-bootstrap'
-import NavbarComponent from '../../components/navbar/navbar';
+
 import styles from './images.module.css'
 import ImageModal from '../../components/ImageModal/ImageModal'
 import PhotoFilters from './PhotoFilters';
@@ -118,7 +118,7 @@ function Photos() {
           `
         }
       </Script>
-      <NavbarComponent />
+      {/* <NavbarComponent /> */}
       <PhotoFilters sort={(filter) => sortImages(filter)} />
 
       <div className={styles.container}>

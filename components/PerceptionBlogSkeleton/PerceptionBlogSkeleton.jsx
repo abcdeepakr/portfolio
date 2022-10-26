@@ -1,5 +1,5 @@
 import React from 'react'
-import NavbarComponent from '../navbar/navbar'
+
 import styles from './PerceptionBlogSkeleton.module.css'
 const { htmlToText } = require('html-to-text');
 
@@ -22,7 +22,6 @@ function PerceptionBlogSkeleton(props) {
     
     return (
         <React.Fragment>
-            <NavbarComponent />
             <div className ={styles.titleContainer}>
                 <h1 className ={styles.title}>{props.post.title}</h1>
             </div>  

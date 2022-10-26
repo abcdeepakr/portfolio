@@ -28,23 +28,15 @@ function Hobbies() {
             <div className ={styles.ButtonContainer}>
                 <Button variant="outlined"  className={styles.Button} size="small"><EditIcon color="success" className ={styles.icon}/> Writing</Button>
             </div>
-            
-            <div className ={styles.ButtonContainer}>
-                <Button variant="outlined"  className={styles.Button} size="small"><SportsCricketIcon color="error" className ={styles.icon}/>Cricket</Button>
-            </div>
+
             <div className ={styles.ButtonContainer}>
                 <Button variant="outlined"  className={styles.Button} size="small"><RestaurantMenuIcon color="error" className ={styles.icon}/> bhole chature</Button>
             </div>
             <br/>
-            {/* <div className ={styles.ButtonContainer}>
-                <Button variant="outlined"  className={styles.Button}>Delhi Metro</Button>
-            </div> */}
+
             <div className ={styles.ButtonContainer}>
                 <Button variant="outlined"  className={styles.Button} size ="small"><CodeIcon color="disabled" className ={styles.icon} /> Building</Button>
-            </div>
-            <div className ={styles.ButtonContainer}>
-                <Button variant="outlined"  className={styles.Button} ><LocationCityIcon color="warning" className ={styles.icon}/> Delhi</Button>
-            </div>
+                </div>
         </div>
         </React.Fragment>
     )
