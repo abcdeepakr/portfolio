@@ -21,6 +21,7 @@
     border-radius: 0px;
     background-position:center;
     animation: display 1s;
+    cursor: pointer;
 }
 .NavbarIcon{
     font-size: 50px;
