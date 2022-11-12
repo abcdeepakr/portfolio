@@ -7,6 +7,11 @@
     height: 300px;
     display: flex;
     justify-content: center;
+    /* background-image: url("/backdrop.jpg"); */
+    background-size: 100%;
+    
+    object-fit: fill;
+
     /* border: 2px solid red; */
 }
 

@@ -1,7 +1,7 @@
 ---
 title: 'Anthimeria'
 date: 'Oct 7, 2021'
-excerpt: 'Google it, Photoshop it, Paytm me, Whatsapp it.'
+excerpt: 'Google it, Photoshop it, Paytm karo, Whatsapp it.'
 cover_image: '/images/posts/img23.jpg'
 area: 'technical'
 ---

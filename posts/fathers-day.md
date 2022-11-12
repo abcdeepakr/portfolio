@@ -3,7 +3,7 @@ title: "Father's Day"
 date: 'Jun 21, 2020'
 excerpt: 'Something that will remain in the archives'
 cover_image: '/images/contentImages/fathersday.jpg'
-area: 'perceptions'
+area: 'perceptionss'
 ---
 
 Happy fathers day to all the fathers in this world, I don't wanna say anything that has already been saying about dads, that they are Heroes, their love and everything.
