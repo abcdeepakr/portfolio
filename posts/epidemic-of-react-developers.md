@@ -13,6 +13,7 @@ That said, the approach towards creating products, writing scripts or learning p
 - Make it work
 - Make it fast
 - Make it pretty
+
 regardless of the tools you use, this is a framework used most commonly across the industry.
 
 I was in the 2nd year of Engineering when I gained some interest in Frontend development. It was fascinating as the output was instant along with the dopamine rush. I loved it, I went to a classmate who had way more experience in programming than I did. I asked him about Frontend web development and the scope of getting a job/relevancy in the future. 
