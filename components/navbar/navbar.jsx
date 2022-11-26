@@ -20,7 +20,11 @@ const NavbarComponent = () => {
                             <Link eventKey={2} href="/photos" passHref>
                             <p className = {styles.links}>Photos</p>
                             </Link>
-                            {/* <Link href="/resume" passHref><p className={styles.links}>Resume</p></Link> */}
+                            <Link href="/resume" passHref>
+                                <p className={styles.links}>
+                                    Resume
+                                </p>
+                            </Link>
                             {/* <Link href="/settle-debates" passHref><p className={styles.links}>Settle Debates</p></Link> */}
                         </Nav>
                     </Navbar.Collapse>

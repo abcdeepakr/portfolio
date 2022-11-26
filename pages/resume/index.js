@@ -2,8 +2,21 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head'
 import Script from 'next/script'
 import styles from './resume.module.css'
+import TerminalUsername from './resumeComponents/terminalUsername';
 function Resume() {
-  const [terminalPath, setTerminalPath] = useState("/path")
+  const[snapshotCommands, setSnapShotCommands] = useState([])
+  const createSnapShotHandler = (command)=>{
+    let updatedSnapshotCommands = [...snapshotCommands]
+    updatedSnapshotCommands.push(command);
+  }
+  const createSnapshotHTML = () =>{
+    let snapshotHTML = ""
+    if(snapshotCommands){
+      snapshotCommands.map(snapshot =>{
+        snapshotHTML+=snapshot //TODO : USE THE USECONTEXT HOOK, SO THAT WE ARE NOT USING EVERYTHING TWICE
+      })
+    }
+  }
   return (
     <React.Fragment >
       <Head>
@@ -13,14 +26,10 @@ function Resume() {
       </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NLZM4G1DRJ" strategy="afterInteractive"></Script>
       <div className={styles.body}>
-        <div>
-          <span><span className={styles.username}>lameuser@lame</span> <span className={styles.terminalName}>terminal</span> <span className={styles.terminalPath}>~{terminalPath}</span> 
-          </span>
-          <div className={styles.inputWrapper}>
-            <p style={{"width": "2%"}}>$ </p>
-            <textarea className={`${styles.commandLineInput} ${styles.scroll}`} type="text" rows="10" maxLength="300"/>
-          </div>
+        <div id="command-snapshot" className={styles.snapshot}>
+          {}
         </div>
+        <TerminalUsername createSnapShot = {(command,path)=>createSnapShotHandler(command,path)}/>
       </div>
     </React.Fragment>
   );
