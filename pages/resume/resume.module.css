@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Source+Code+Pro&display=swap');
 .body{
     background-color: #121212;
-    height: 100vh;
+    display: flex;
+  flex-direction: column;
+  min-height: 100%;
+    height: auto;
     width: 100vw;
+    position: absolute;
     font-family: 'Source Code Pro', monospace;
     color: white;
     font-weight: 800;
 
 }
+.deeminal-welcome{
+    font-size: 1rem;
+    font-weight: 400;
+}
 .terminalPath{
     color: yellow;
+}
+.terminalCommand{
+    color: white;
+    word-wrap: break-word;
+    font-weight: 400;
 }
 .username{
     color: #66FF00;
@@ -28,6 +41,9 @@
     resize: none;
     overflow: hidden;
     margin-left: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .scroll::-webkit-scrollbar {
     display: none;

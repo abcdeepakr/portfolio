@@ -1,22 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext  } from 'react';
 import Head from 'next/head'
 import Script from 'next/script'
 import styles from './resume.module.css'
+import Terminal from './resumeComponents/terminal';
 import TerminalUsername from './resumeComponents/terminalUsername';
+import {AppContext} from '../../pages/_app' 
+
 function Resume() {
-  const[snapshotCommands, setSnapShotCommands] = useState([])
-  const createSnapShotHandler = (command)=>{
-    let updatedSnapshotCommands = [...snapshotCommands]
-    updatedSnapshotCommands.push(command);
+  const applicationTerminalContext = useContext(AppContext)
+  const pathCommandSnapShot = applicationTerminalContext.state.pathCommandSnapshot
+
+  const createSnapshotHTML = (snapshot) =>{
+    let path = (
+    <span key = {snapshot.id}>
+      <span className={styles.username}>lameuser@lame {" "}</span> 
+      <span className={styles.terminalName}>terminal</span> 
+      <span className={styles.terminalPath}>~{snapshot.path}{" "}</span>
+      <span className={styles.terminalCommand}>{snapshot.command}</span>
+      <br></br>
+      <span className={styles.terminalCommand}>{snapshot.result}</span>
+    </span>)
+    return path
   }
-  const createSnapshotHTML = () =>{
-    let snapshotHTML = ""
-    if(snapshotCommands){
-      snapshotCommands.map(snapshot =>{
-        snapshotHTML+=snapshot //TODO : USE THE USECONTEXT HOOK, SO THAT WE ARE NOT USING EVERYTHING TWICE
-      })
-    }
-  }
+  
   return (
     <React.Fragment >
       <Head>
@@ -26,10 +32,15 @@ function Resume() {
       </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NLZM4G1DRJ" strategy="afterInteractive"></Script>
       <div className={styles.body}>
+        <p className={styles["deeminal-welcome"]}>Welcome to Deeminal, let's get you started.<br></br> "help"</p>
         <div id="command-snapshot" className={styles.snapshot}>
-          {}
+          {pathCommandSnapShot ? (
+            pathCommandSnapShot.map(snapshot =>{
+              return createSnapshotHTML(snapshot)
+            })
+          ) : null}
         </div>
-        <TerminalUsername createSnapShot = {(command,path)=>createSnapShotHandler(command,path)}/>
+        <Terminal />
       </div>
     </React.Fragment>
   );
