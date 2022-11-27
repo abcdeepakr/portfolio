@@ -2,11 +2,12 @@ import { useState, useContext, useEffect } from 'react';
 import styles from '../resume.module.css'
 import { AppContext } from '../../_app'
 import TerminalUsername from './terminalUsername'
+import ListDirectory from './ListDirectory'
+import directory from '../../../public/directory.json'
 const Terminal = (props) => {
-
     const applicationTerminalContext = useContext(AppContext)
 
-    const [terminalPath, setTerminalPath] = useState("")
+    const [terminalPath, setTerminalPath] = useState(["/home"])
     const [terminalCommand, setTerminalCommand] = useState("")
     const [commandHistoryIndex, setCommandHistoryIndex] = useState(applicationTerminalContext.state.pathCommandSnapshot.length - 1)
 
@@ -37,34 +38,50 @@ const Terminal = (props) => {
 
     }
     const parseCommand = (terminalCommand) => {
-        terminalCommand = terminalCommand.replace("dee", "")
-        terminalCommand = terminalCommand.replace("\n", "")
-        terminalCommand.trim(" ")
+        terminalCommand = terminalCommand.replace(/\n| /gi, "")
         return terminalCommand
     }
-    const updatePathHandler = (terminalCommand) => {
-        terminalCommand = terminalCommand.replace("cd", "")
-        terminalCommand = terminalCommand.trim()
-        if (!terminalCommand.startsWith(".")) {
-            terminalPath += "/" + terminalCommand
-            setTerminalPath(terminalPath)
+    const updatePathHandler = (command) => {
+        command = command.replace(/cd| /gi, "")
+        if (!command.startsWith(".")) {
+            let updatedTerminalPath = [...terminalPath]
+            if(directory.hasOwnProperty(command) && terminalPath[terminalPath.length -1 ]!= ("/"+command)){
+                updatedTerminalPath.push("/" + command)
+                setTerminalPath(updatedTerminalPath)
+                return command
+            } else{
+                return null
+            }
+        } 
+        if(command == "../"){
+            let updatedTerminalPath = [...terminalPath]
+            updatedTerminalPath.pop()
+            setTerminalPath(updatedTerminalPath)
+            return terminalCommand
         }
     }
-    const commandResult = (terminalCommand) => {
-        terminalCommand = parseCommand(terminalCommand)
-        if (terminalCommand.startsWith("cd")) {
-            updatePathHandler(terminalCommand)
-        }
-        switch (terminalCommand) {
-            case "help": {
-                return (<p className={styles.terminalCommand}>You can use the following list of commands</p>)
+    
+    const commandResult = (currCommand) => {
+        currCommand = parseCommand(currCommand)
+        if (currCommand.startsWith("cd")) {
+            let dir = updatePathHandler(currCommand)    
+            if(dir == null){
+                currCommand = "dir-404"
             }
+        }
+        switch (currCommand) {
             case "clear": {
                 applicationTerminalContext.dispatchState({ type: "CLEAR_SNAPSHOTS", pathCommand: {} })
                 return ""
             }
+            case "ls":{
+                return (<ListDirectory path={terminalPath}/>)
+            }
+             case "dir-404":{
+                return (<p className={styles.terminalCommand}>{terminalCommand}:  No such file or directory</p>)
+             }
             default:
-                return (<p className={styles.terminalCommand}></p>)
+                return ""
         }
     }
 
@@ -79,11 +96,11 @@ const Terminal = (props) => {
             event.target.value = ""
             event.preventDefault()
             let commandResultHTML = commandResult(terminalCommand)
-            if (parseCommand(terminalCommand) != "clear") {
+            let parsedCommand = parseCommand(terminalCommand)
+            if (parsedCommand != "clear" && parseCommand!="ls") {
                 applicationTerminalContext.dispatchState({ type: "UPDATE_SNAPSHOTS", pathCommand: { path: terminalPath, command: terminalCommand, result: commandResultHTML } })
                 setCommandHistoryIndex(applicationTerminalContext.state.pathCommandSnapshot.length)
             }
-
         }
     }
     return (

@@ -27,12 +27,13 @@ function Resume() {
     <React.Fragment >
       <Head>
         <title>Deepak Rawat | Resume</title>
-        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" 
+          content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="icon" href="/profile.jpg" />
       </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NLZM4G1DRJ" strategy="afterInteractive"></Script>
       <div className={styles.body}>
-        <p className={styles["deeminal-welcome"]}>Welcome to Deeminal, let's get you started.<br></br> "help"</p>
+        <p className={styles["deeminal-welcome"]}>Welcome to Deeminal, let&apos;s get you started.<br></br> `help`</p>
         <div id="command-snapshot" className={styles.snapshot}>
           {pathCommandSnapShot ? (
             pathCommandSnapShot.map(snapshot =>{

@@ -10,8 +10,13 @@
     font-family: 'Source Code Pro', monospace;
     color: white;
     font-weight: 800;
-
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
 }
+.body::-webkit-scrollbar {
+    display: none;
+    width: 100px;
+  }
 .deeminal-welcome{
     font-size: 1rem;
     font-weight: 400;
@@ -23,6 +28,7 @@
     color: white;
     word-wrap: break-word;
     font-weight: 400;
+    font-size: 1rem;
 }
 .username{
     color: #66FF00;
@@ -52,8 +58,22 @@
     display: flex;
     flex-direction: row;
 }
+.ul{
+    padding-left: 1rem;
+}
 
-
+.files, .folders{
+    
+    display: block;
+    list-style-type: none;
+}
+.files{
+    color:white;
+}
+.folders{
+    color:#32afff;
+    font-weight: 700;
+}
 /* mobile */
 @media only screen and (max-width: 500px) {
       }

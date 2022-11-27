@@ -1,4 +1,4 @@
-export const initialState = { pathCommandSnapshot: [] };
+export const initialState = { pathCommandSnapshot: []};
 
 export const reducer = (state, action) => { // expects a current state and action to be worked on
     switch (action.type) {

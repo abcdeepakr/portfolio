@@ -1,0 +1,20 @@
+{
+    "home":{
+        "why":{},
+        "about":{},
+        "interests":{},
+        "education":{},
+        "skills":{},
+        "type":"directory"
+    },
+    "projects":{
+        "project_name1":{},
+        "project_name2":{},
+        "type":"directory"
+    },
+    "profiles":{
+        "profile1":{},
+        "profile2":{},
+        "type":"directory"
+    }
+}

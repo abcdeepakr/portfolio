@@ -6,7 +6,7 @@ function TerminalUsername(props) {
     <>
       <span className={styles.username}>lameuser@lame {" "}</span>
       <span className={styles.terminalName}>terminal</span>
-      <span className={styles.terminalPath}>~{props.terminalPath}</span>
+      <span className={styles.terminalPath}>~{props.terminalPath.reduce((fp,p)=>{return fp+=p},"")}</span>
     </>
 
 
