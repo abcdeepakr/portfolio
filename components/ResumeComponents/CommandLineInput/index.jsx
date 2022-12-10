@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head'
-import Script from 'next/script'
 import styles from './index.module.css'
 function Resume() {
   const [terminalPath, setTerminalPath] = useState("/path")

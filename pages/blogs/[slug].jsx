@@ -22,12 +22,10 @@ export async function getStaticPaths() {
 
 
 export async function getStaticProps({ params: { slug } }) {
-    // console.log(params)
     const markdownWithMeta = fs.readFileSync(
         path.join('posts', slug + '.md'),
         'utf-8'
     )
-    // console.log(markdownWithMeta)
     const { data: frontmatter, content } = matter(markdownWithMeta)
     return {
         props: {

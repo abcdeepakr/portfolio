@@ -23,8 +23,7 @@ const currentDirectory = () =>{
                 
             )
         }
-    } else if(props.path.length == 0){
-        console.log(Object.keys(props.path))
+    } else if (props.path.length == 0) {
         return (
             <ul className={styles.ul}>
                 {Object.keys(directory).map(item =>{
@@ -32,7 +31,6 @@ const currentDirectory = () =>{
                     if(directory[item].hasOwnProperty("type")){
                         fileClass =  directory[item].type == "directory" ? "folders" : "files"
                     }
-                    console.log(fileClass)
                     return (
                     <li key={item} className={styles[fileClass]}>
                         {item != "type" ? item : null}
@@ -44,7 +42,6 @@ const currentDirectory = () =>{
     }
 
 }
-console.log(currentDirectory())
   return (
     <div>{currentDirectory()}</div>
   )

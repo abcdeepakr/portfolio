@@ -1,20 +1,38 @@
 {
-    "home":{
-        "why":{},
-        "about":{},
-        "interests":{},
-        "education":{},
-        "skills":{},
-        "type":"directory"
+    "home": {
+        "why": {
+            "type": "file"
+        },
+        "interests": {
+            "type": "file"
+        },
+        "education": {
+            "type": "file"
+        },
+        "skills": {
+            "type": "file"
+        },
+        "type": "directory"
     },
-    "projects":{
-        "project_name1":{},
-        "project_name2":{},
-        "type":"directory"
+    "projects": {
+        "project_name1": {
+            "type": "file"
+        },
+        "project_name2": {
+            "type": "file"
+        },
+        "type": "directory"
     },
-    "profiles":{
-        "profile1":{},
-        "profile2":{},
-        "type":"directory"
+    "profiles": {
+        "profile1": {
+            "type": "file"
+        },
+        "profile2": {
+            "type": "file"
+        },
+        "type": "directory"
+    },
+    "about": {
+        "type": "file"
     }
 }

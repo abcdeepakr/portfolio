@@ -1,9 +1,20 @@
+/**
+ * File is responsible for the following components
+ * User inputs
+ * filtering inputs
+ * directory view
+ * 
+ */
+
 import { useState, useContext, useEffect } from 'react';
 import styles from '../resume.module.css'
 import { AppContext } from '../../_app'
 import TerminalUsername from './terminalUsername'
 import ListDirectory from './ListDirectory'
 import directory from '../../../public/directory.json'
+import { FileContent } from '../../../components/ResumeComponents/FileContent/FileContent'
+import NotFound from './NotFound';
+import HelpCommands from './HelpCommands'
 const Terminal = (props) => {
     const applicationTerminalContext = useContext(AppContext)
 
@@ -12,9 +23,10 @@ const Terminal = (props) => {
     const [commandHistoryIndex, setCommandHistoryIndex] = useState(applicationTerminalContext.state.pathCommandSnapshot.length - 1)
 
     const updateCommandInput = (event) => {
-        let updatedCommand = event.target.value;
-        setTerminalCommand(updatedCommand);
+        let newCommand = event.target.value;
+        setTerminalCommand(newCommand);
     }
+
     const updateCurrentCommand = (event, button) => {
         let currentCommandHistoryIndex = commandHistoryIndex
         if (button == "up") {
@@ -37,38 +49,72 @@ const Terminal = (props) => {
         setCommandHistoryIndex(currentCommandHistoryIndex)
 
     }
-    const parseCommand = (terminalCommand) => {
-        terminalCommand = terminalCommand.replace(/\n| /gi, "")
-        return terminalCommand
+    const parseCommand = (commandInput) => {
+        commandInput = commandInput.replace(/\n| /gi, "")
+        return commandInput // returns parsed command
     }
     const updatePathHandler = (command) => {
+        console.log("inside update path handler")
         command = command.replace(/cd| /gi, "")
+        let updatedTerminalPath;
         if (!command.startsWith(".")) {
-            let updatedTerminalPath = [...terminalPath]
+            updatedTerminalPath = [...terminalPath]
             if(directory.hasOwnProperty(command) && terminalPath[terminalPath.length -1 ]!= ("/"+command)){
                 updatedTerminalPath.push("/" + command)
                 setTerminalPath(updatedTerminalPath)
+                applicationTerminalContext.dispatchState({ type: "UPDATE_PATH", path: updatedTerminalPath })
                 return command
             } else{
                 return null
             }
-        } 
+        }
         if(command == "../"){
-            let updatedTerminalPath = [...terminalPath]
+            updatedTerminalPath = [...terminalPath]
             updatedTerminalPath.pop()
-            setTerminalPath(updatedTerminalPath)
+            setTerminalPath(updatedTerminalPath)   
+            applicationTerminalContext.dispatchState({ type: "UPDATE_PATH", path: updatedTerminalPath })
             return terminalCommand
         }
     }
     
     const commandResult = (currCommand) => {
+        function findFile(directoryPathObject) {
+            let found = Object.keys(directoryPathObject).filter((fileName) => {
+                return directoryPathObject[fileName].type == "file" && fileName == currCommand.replace("cat", "")
+            })
+            console.log("found", found)
+            if (found.length > 0) {
+                return true
+            } else {
+                return false
+            }
+        }
         currCommand = parseCommand(currCommand)
+
+        // finds the directory
+        currCommand = currCommand.toLowerCase()
         if (currCommand.startsWith("cd")) {
             let dir = updatePathHandler(currCommand)    
             if(dir == null){
                 currCommand = "dir-404"
             }
+        } else if (currCommand.startsWith("cat")) {
+            let fileFound;
+            if (applicationTerminalContext.state.currentPath.length == 0) {
+                fileFound = findFile(directory)
+            } else {
+                let currPath = applicationTerminalContext.state.currentPath
+                currPath = currPath[currPath.length - 1]
+                currPath = currPath.replaceAll("/", "")
+                fileFound = findFile(directory[currPath])
+            }
+            if (fileFound) {
+                return <FileContent file={currCommand.replace("cat", "")} />
+            } else {
+                return <NotFound command={terminalCommand} />
+            }
         }
+
         switch (currCommand) {
             case "clear": {
                 applicationTerminalContext.dispatchState({ type: "CLEAR_SNAPSHOTS", pathCommand: {} })
@@ -77,15 +123,23 @@ const Terminal = (props) => {
             case "ls":{
                 return (<ListDirectory path={terminalPath}/>)
             }
-             case "dir-404":{
-                return (<p className={styles.terminalCommand}>{terminalCommand}:  No such file or directory</p>)
-             }
+            case "dir-404": {
+                return (<p className={styles.terminalCommand}>{terminalCommand}:  No such directory</p>)
+            }
+            case "help": {
+                return (<HelpCommands />)
+            }
             default:
+                console.log("serving")
                 return ""
         }
     }
+    const serveFileData = (fileName) => {
+        return <FileContent file={fileName} />
+    }
+    // this function reads the command and executes
+    const onKeyUpValue = async (event) => {
 
-    const onKeyUpValue = (event) => {
         if (event.key == "ArrowUp") {
             updateCurrentCommand(event, "up")
         }
@@ -93,13 +147,15 @@ const Terminal = (props) => {
             updateCurrentCommand(event, "down")
         }
         if (event.key == "Enter") {
-            event.target.value = ""
-            event.preventDefault()
-            let commandResultHTML = commandResult(terminalCommand)
-            let parsedCommand = parseCommand(terminalCommand)
-            if (parsedCommand != "clear" && parseCommand!="ls") {
-                applicationTerminalContext.dispatchState({ type: "UPDATE_SNAPSHOTS", pathCommand: { path: terminalPath, command: terminalCommand, result: commandResultHTML } })
-                setCommandHistoryIndex(applicationTerminalContext.state.pathCommandSnapshot.length)
+            event.target.value = "";
+            event.preventDefault();
+            let commandResultHTML = commandResult(terminalCommand);
+            let parsedCommand = parseCommand(terminalCommand);
+            console.log(parsedCommand)
+            if (parsedCommand != "clear") {
+                applicationTerminalContext.dispatchState({ type: "UPDATE_SNAPSHOTS", pathCommand: { path: terminalPath, command: terminalCommand, result: commandResultHTML } });
+                console.log(applicationTerminalContext.state.pathCommandSnapshot)
+                setCommandHistoryIndex(applicationTerminalContext.state.pathCommandSnapshot.length);
             }
         }
     }

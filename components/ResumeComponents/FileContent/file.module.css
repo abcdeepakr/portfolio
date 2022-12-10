@@ -1,0 +1,29 @@
+.title{
+  margin-left: 10px;
+}
+.subTitle{
+
+}
+.paragraph{
+
+}
+.sentence{
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.list{
+  padding-left: 1rem;
+}
+.list {
+  list-style: none;
+}
+.list >li > a {
+  color: turquoise;
+}
+.institution{
+  padding-left: 1rem;
+  font-size: 1rem;
+}

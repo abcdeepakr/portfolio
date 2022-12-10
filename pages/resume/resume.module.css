@@ -74,6 +74,37 @@
     color:#32afff;
     font-weight: 700;
 }
+
+
+/* HELP Command */
+
+.helpTable{
+    border:1px solid white;
+    border-style: dashed;
+    table-layout: auto;
+}
+.helpTable > tr > th{
+    width: auto;
+    text-align: center;
+    border: 1px solid white;
+    border-style: dashed;
+    padding: 10px;
+}
+.helpTable > tr{
+    border: 1px solid white;
+    border-style: dashed;
+}
+.helpTable > tr>  td{
+    border: 1px solid white;
+    border-style: dashed;
+    padding: 2px 10px;
+}
+
 /* mobile */
 @media only screen and (max-width: 500px) {
-      }
+    .helpTable > tr>  td{
+        border: 1px solid white;
+        border-style: dashed;
+        padding: 5px 5px;
+    }
+}
