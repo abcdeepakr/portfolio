@@ -12,7 +12,7 @@ import Script from 'next/script'
 import styles from './resume.module.css'
 import Terminal from './resumeComponents/terminal';
 import {AppContext} from '../../pages/_app'
-import {adjective} from './resumeComponents/adjective.js'
+import {adjective} from '../../public/adjective.js'
 
 
 function Resume() {
