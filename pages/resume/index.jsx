@@ -11,19 +11,23 @@ import Head from 'next/head'
 import Script from 'next/script'
 import styles from './resume.module.css'
 import Terminal from './resumeComponents/terminal';
-import TerminalUsername from './resumeComponents/terminalUsername';
-import { AppContext } from '../_app'
-import Image from 'next/image';
+import {AppContext} from '../../pages/_app'
+import {adjective} from './resumeComponents/adjective.js'
+
 
 function Resume() {
   const applicationTerminalContext = useContext(AppContext)
+  useEffect(()=>{
+    let userName = adjective()
+    applicationTerminalContext.dispatchState({ type: "UPDATE_USERNAME", name: userName })
+  },[])
   const pathCommandSnapShot = applicationTerminalContext.state.pathCommandSnapshot
-
+  let userName = applicationTerminalContext.state.userName
   const createSnapshotHTML = (snapshot) => {
 
     let path = (
       <span key={snapshot.id}>
-        <span className={styles.username}>lameuser@lame {" "}</span>
+        <span className={styles.username}>{userName}@Derminal {" "}</span>
         <span className={styles.terminalName}>terminal</span>
         <span className={styles.terminalPath}>~{snapshot.path}{" "}</span>
         <span className={styles.terminalCommand}>{snapshot.command}</span>
@@ -34,6 +38,7 @@ function Resume() {
   }
 
   return (
+    
     <React.Fragment >
       <Head>
         <title>Deepak Rawat | Resume</title>
@@ -45,8 +50,8 @@ function Resume() {
         <link rel="icon" href="/profile.jpg" />
       </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NLZM4G1DRJ" strategy="afterInteractive"></Script>
-      <body className={styles.resumeBody}>
-      <div >
+      <>
+      <div className={styles.resumeBody}>
         <p className={styles["deeminal-welcome"]}>Welcome to this smol terminal, let&apos;s get you started.<br></br>Type `help` view a list of commands.</p>
         <div id="command-snapshot" className={styles.snapshot}>
           {pathCommandSnapShot ? (
@@ -57,7 +62,7 @@ function Resume() {
         </div>
         <Terminal />
       </div>  
-      </body>
+      </>
       
     </React.Fragment>
   );

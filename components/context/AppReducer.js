@@ -1,7 +1,15 @@
-export const initialState = { pathCommandSnapshot: [], currentPath:["/home"]};
+export const initialState = { pathCommandSnapshot: [], currentPath:["/home"], userName:"hungryhippo"};
 
 export const reducer = (state, action) => { // expects a current state and action to be worked on
     switch (action.type) {
+        case "UPDATE_USERNAME":
+            {
+                // console.trace("snapshot")
+                // console.log("updating snapchot")
+                let updatedState = {...state }                
+                updatedState.userName = action.name
+                return updatedState
+            }
         case "UPDATE_SNAPSHOTS":
             {
                 // console.trace("snapshot")
