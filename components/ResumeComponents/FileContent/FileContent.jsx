@@ -2,10 +2,13 @@ import React, { useContext } from 'react'
 import directory from '../../../public/directory.json'
 import { AppContext } from '../../../pages/_app'
 import styles from './file.module.css'
+import { ProjectFile } from '../ProjectFiles'
+import { Profiles } from '../profiles'
 export function FileContent(props) {
+  console.log("indise file content")
   const applicationTerminalContext = useContext(AppContext)
   let currentPath = applicationTerminalContext.state.currentPath
-  console.log(props.file)
+  console.log("path", currentPath)
   if (props.file == "help") {
     return (
       <div>I've always wanted to create a terminal of this style, and hence this is what i decided to create</div>
@@ -30,9 +33,9 @@ export function FileContent(props) {
     return (
       <div>
         <ul className={styles.list}>
-          <li title="ctrl+click to open link in new tab"><a href="https://www.pexels.com/@deepakrawat/">Photograph Stuff</a></li>
-          <li title="ctrl+click to open link in new tab"><a href="https://hashnode.com/@deepakr28">Blog Stuff</a></li>
-          <li title="ctrl+click to open link in new tab"><a href="https://github.com/DeepakR-28">Build Stuff</a></li>
+          <li title="ctrl+click to open link in new tab"><a target="_blank" className={styles.link} href="https://www.pexels.com/@deepakrawat/">Photograph Stuff</a></li>
+          <li title="ctrl+click to open link in new tab"><a target="_blank" className={styles.link} href="https://deepakr28.com/blogs">Blog Stuff</a></li>
+          <li title="ctrl+click to open link in new tab"><a target="_blank" className={styles.link} href="https://github.com/DeepakR-28">Build Stuff</a></li>
         </ul>
       </div>
     )
@@ -61,15 +64,49 @@ export function FileContent(props) {
   if (props.file == "skills") {
     return (
       <div className={styles.skillsContainer}>
-        <span><span className={styles.sentence}>Javascript</span>: Written Clean JS code on production Web apps which serves more than a million users per month</span><br />
-        <span><span className={styles.sentence}>NodeJs : </span>Written Backend services in Nodejs that perfomed critical tasks related to customers after sale journey.</span><br />
-        <span><span className={styles.sentence}>ReactJS : </span>Written production applications used internally for in house logistics</span><br />
-        <span><span className={styles.sentence}>Shopify Ecosystem : </span>Gained control over Shopify's templating language liquid and developed multiple features for our organization on top of Shopify.</span><br />
-        <span><span className={styles.sentence}>Python : </span>Used python to make CLI apps and problem solving assignments</span><br />
-        <span><span className={styles.sentence}>Azure : </span>Created deployments, Database services, Static Web Apps deployment, pipelines etc.</span><br />
-        <span><span className={styles.sentence}>Golang : </span>Created a simple REST API which communicated with MongoDB to perform CRUD operations</span><br />
+        <table>
+          <tr className={styles.skillCol}>
+            <th style={{ "padding": "5px 10px 0px 10px" }}></th>
+            <th style={{ "padding": "5px 10px 0px 10px" }}></th>
+          </tr>
+          <tr className={styles.skillCol}>
+            <td className={styles.skillName} style={{ "color": "#f1ce05" }} >JavaScript</td>
+            <td >Written multiple features <a target="_blank" className={styles.link} href="https://tpstech.in">@TPS Technologies</a> to improve the capabilities of the Ecommerce platform. Created multiple <a target="_blank" className={styles.link} href="https://github.com/DeepakR-28?tab=repositories&q=&type=public&language=javascript&sort=">personal projects</a> using Vanilla JS and Reactjs </td>
+          </tr>
+          <tr className={styles.skillCol}>
+            <td className={styles.skillName} style={{ "color": "#73ab60" }}>NodeJs</td>
+            <td >Written Backend services that perfomed critical tasks related to customers after sale journey. Wrote multiple cron jobs which synced data between different services</td>
+          </tr>
+          <tr className={styles.skillCol}>
+            <td className={styles.skillName} style={{ "color": "#5ed3f3" }}>ReactJS</td>
+            <td >Written complex React Application for the logistics operation of TPS Technologies which used multiple 3P APIs</td>
+          </tr>
+          <tr className={styles.skillCol}>
+            <td className={styles.skillName} style={{ "color": "#95bf47" }}>Shopify <br></br>Ecosystem</td>
+            <td >Used the Shopify Templating Language <a target="_blank" className={styles.link} href="https://shopify.dev/api/liquid">Liquid</a> to develop, improve and maintain features on TPS Technologies</td>
+          </tr>
+          <tr className={styles.skillCol}>
+            <td className={styles.skillName} style={{ "color": "yellow" }}>Python</td>
+            <td >Used python to make CLI apps, to improve my problem solving skills and make <a target="_blank" className={styles.link} href="https://github.com/DeepakR-28/projects">fun projects</a> like movie guessing game and a voice calculator. </td>
+          </tr>
+          <tr className={styles.skillCol}>
+            <td className={styles.skillName} style={{ "color": "#35b4e9" }}>Azure</td>
+            <td >Setup deployment pipelines, Database services, Static Web Apps deployment, Serverless functions, API Uptime Monitoring, RCA, Authentication using Azure AD</td>
+          </tr>
+          <tr className={styles.skillCol}>
+            <td className={styles.skillName} style={{ "color": "#00a7d0" }}>Golang</td>
+            <td >Created small <a target="_blank" className={styles.link} href="https://github.com/DeepakR-28?tab=repositories&q=&type=&language=golang&sort=">backend services </a>which serve data using REST APIs</td>
+          </tr>
+        </table>
       </div>
     )
+  }
+  if (currentPath[0] == "/projects") {
+    return <ProjectFile projectName={props.file} />
+  }
+  if (currentPath[0] == "/profiles") {
+    console.log("opening profile")
+    return <Profiles profileName={props.file} />
   }
 
   return (

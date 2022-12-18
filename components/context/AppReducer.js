@@ -4,8 +4,8 @@ export const reducer = (state, action) => { // expects a current state and actio
     switch (action.type) {
         case "UPDATE_SNAPSHOTS":
             {
-                console.trace("snapshot")
-                console.log("updating snapchot")
+                // console.trace("snapshot")
+                // console.log("updating snapchot")
                 let updatedState = {...state }
                 let newPathCommandSnapshot = { path: action.pathCommand.path, command: action.pathCommand.command.replaceAll("\n",""), result: action.pathCommand.result, id: new Date().getTime() + Math.random() }
                 updatedState.pathCommandSnapshot.push(newPathCommandSnapshot)
@@ -19,7 +19,7 @@ export const reducer = (state, action) => { // expects a current state and actio
             }
         case "UPDATE_PATH":
             {
-                console.trace("path")
+                // console.trace("path")
                 let updatedState = {...state }
                 updatedState.currentPath = action.path
                 return updatedState

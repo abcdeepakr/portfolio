@@ -15,20 +15,32 @@
         "type": "directory"
     },
     "projects": {
-        "project_name1": {
+        "vishwall": {
             "type": "file"
         },
-        "project_name2": {
+        "hindi_wordle": {
+            "type": "file"
+        },
+        "medium_clone_backend": {
+            "type": "file"
+        },
+        "daily_progress": {
             "type": "file"
         },
         "type": "directory"
     },
     "profiles": {
-        "profile1": {
-            "type": "file"
+        "github": {
+            "type": "file",
+            "url":"https://github.com/DeepakR-28"
         },
-        "profile2": {
-            "type": "file"
+        "linkedin": {
+            "type": "file",
+            "url":"https://www.linkedin.com/in/deepakr28/"
+        },
+        "pexels": {
+            "type": "file",
+            "url":"https://www.pexels.com/@deepakrawat/"
         },
         "type": "directory"
     },

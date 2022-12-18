@@ -45,7 +45,6 @@ const Terminal = (props) => {
         if (applicationTerminalContext.state.pathCommandSnapshot.length > 0) {
             event.target.value = applicationTerminalContext.state.pathCommandSnapshot[currentCommandHistoryIndex].command
         }
-
         setCommandHistoryIndex(currentCommandHistoryIndex)
 
     }
@@ -82,7 +81,6 @@ const Terminal = (props) => {
             let found = Object.keys(directoryPathObject).filter((fileName) => {
                 return directoryPathObject[fileName].type == "file" && fileName == currCommand.replace("cat", "")
             })
-            console.log("found", found)
             if (found.length > 0) {
                 return true
             } else {
@@ -109,6 +107,7 @@ const Terminal = (props) => {
                 fileFound = findFile(directory[currPath])
             }
             if (fileFound) {
+                console.log("found")
                 return <FileContent file={currCommand.replace("cat", "")} />
             } else {
                 return <NotFound command={terminalCommand} />
@@ -124,21 +123,50 @@ const Terminal = (props) => {
                 return (<ListDirectory path={terminalPath}/>)
             }
             case "dir-404": {
-                return (<p className={styles.terminalCommand}>{terminalCommand}:  No such directory</p>)
+                return (<p style={{ "color": "red" }} className={styles.terminalCommand}>{terminalCommand}:  No such directory</p>)
             }
             case "help": {
                 return (<HelpCommands />)
             }
             default:
                 console.log("serving")
-                return ""
+                return (<p style={{ "color": "red" }} className={styles.terminalCommand}>{terminalCommand}:  No such directory/file</p>)
         }
     }
-    const serveFileData = (fileName) => {
-        return <FileContent file={fileName} />
-    }
     // this function reads the command and executes
+    const onKeyDownValue = async (event) => {
+        // autofill using tab key
+
+        console.log(event.target.value)
+        if (event.which == 9) {
+            event.preventDefault()
+            let responses = []
+            let currpath = terminalPath[0] ? terminalPath[0].replace("/", "") : ""
+            let input = event.target.value.split(" ")
+            if (currpath == "") {
+                Object.keys(directory).map(file => {
+                    if (file.startsWith(input[input.length - 1])) {
+                        responses.push(file)
+                    }
+                })
+            } else {
+                Object.keys(directory[currpath]).map(file => {
+                    if (file.startsWith(input[input.length - 1])) {
+                        responses.push(file)
+                    }
+                })
+            }
+
+
+            if (responses.length > 0) {
+                event.target.value = input[0] + " " + responses[0]
+            }
+
+
+        }
+    }
     const onKeyUpValue = async (event) => {
+
 
         if (event.key == "ArrowUp") {
             updateCurrentCommand(event, "up")
@@ -151,10 +179,9 @@ const Terminal = (props) => {
             event.preventDefault();
             let commandResultHTML = commandResult(terminalCommand);
             let parsedCommand = parseCommand(terminalCommand);
-            console.log(parsedCommand)
+            let currpath = terminalPath[0]
             if (parsedCommand != "clear") {
                 applicationTerminalContext.dispatchState({ type: "UPDATE_SNAPSHOTS", pathCommand: { path: terminalPath, command: terminalCommand, result: commandResultHTML } });
-                console.log(applicationTerminalContext.state.pathCommandSnapshot)
                 setCommandHistoryIndex(applicationTerminalContext.state.pathCommandSnapshot.length);
             }
         }
@@ -172,6 +199,7 @@ const Terminal = (props) => {
                     maxLength="150"
                     onChange={(event) => updateCommandInput(event)}
                     onKeyUp={(event) => onKeyUpValue(event)}
+                    onKeyDown={(event) => onKeyDownValue(event)}
                 />
             </div>
         </div>

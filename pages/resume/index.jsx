@@ -19,6 +19,7 @@ function Resume() {
   const pathCommandSnapShot = applicationTerminalContext.state.pathCommandSnapshot
 
   const createSnapshotHTML = (snapshot) => {
+
     let path = (
       <span key={snapshot.id}>
         <span className={styles.username}>lameuser@lame {" "}</span>
@@ -44,7 +45,7 @@ function Resume() {
         <p className={styles["deeminal-welcome"]}>Welcome to Deeminal, let&apos;s get you started.<br></br> `help`</p>
         <div id="command-snapshot" className={styles.snapshot}>
           {pathCommandSnapShot ? (
-            pathCommandSnapShot.map(snapshot => {
+            pathCommandSnapShot.map((snapshot, index) => {
               return createSnapshotHTML(snapshot)
             })
           ) : null}
