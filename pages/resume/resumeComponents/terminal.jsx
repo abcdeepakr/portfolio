@@ -123,7 +123,7 @@ const Terminal = (props) => {
                 return (<ListDirectory path={terminalPath}/>)
             }
             case "dir-404": {
-                return (<p style={{ "color": "red" }} className={styles.terminalCommand}>{terminalCommand}:  No such directory</p>)
+                return (<p style={{ "color": "red" }} className={styles.terminalCommand}>{terminalCommand}:  No such directory, make sure to use &quot;cd _filename_&quot; to view folder content </p>)
             }
             case "help": {
                 return (<HelpCommands />)

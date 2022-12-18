@@ -42,7 +42,7 @@ function Resume() {
       </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NLZM4G1DRJ" strategy="afterInteractive"></Script>
       <div className={styles.body}>
-        <p className={styles["deeminal-welcome"]}>Welcome to Deeminal, let&apos;s get you started.<br></br> `help`</p>
+        <p className={styles["deeminal-welcome"]}>Welcome to this smol terminal, let&apos;s get you started.<br></br>Type `help` view a list of commands.</p>
         <div id="command-snapshot" className={styles.snapshot}>
           {pathCommandSnapShot ? (
             pathCommandSnapShot.map((snapshot, index) => {

@@ -35,3 +35,19 @@
   padding-left: 1rem;
   font-size: 1rem;
 }
+@media only screen and (max-width: 600px) {
+  .skillCol {
+    border: 1px dotted white;
+  }
+  
+.skillName{
+  /* background-color: red; */
+ border: 1px dotted white;
+}
+.skillDesc{
+  /* background-color: red; */
+  padding: 20px 10px;
+  border: 1px dotted white;
+  
+}
+}

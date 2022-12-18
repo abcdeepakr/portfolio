@@ -64,38 +64,38 @@ export function FileContent(props) {
   if (props.file == "skills") {
     return (
       <div className={styles.skillsContainer}>
-        <table>
+        <table >
           <tr className={styles.skillCol}>
             <th style={{ "padding": "5px 10px 0px 10px" }}></th>
             <th style={{ "padding": "5px 10px 0px 10px" }}></th>
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "#f1ce05" }} >JavaScript</td>
-            <td >Written multiple features <a target="_blank" rel="noreferrer" className={styles.link} href="https://tpstech.in">@TPS Technologies</a> to improve the capabilities of the Ecommerce platform. Created multiple <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/DeepakR-28?tab=repositories&q=&type=public&language=javascript&sort=">personal projects</a> using Vanilla JS and Reactjs </td>
+            <td className={styles.skillDesc} >Written multiple features <a target="_blank" rel="noreferrer" className={styles.link} href="https://tpstech.in">@TPS Technologies</a> to improve the capabilities of the Ecommerce platform. Created multiple <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/DeepakR-28?tab=repositories&q=&type=public&language=javascript&sort=">personal projects</a> using Vanilla JS and Reactjs </td>
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "#73ab60" }}>NodeJs</td>
-            <td >Written Backend services that perfomed critical tasks related to customers after sale journey. Wrote multiple cron jobs which synced data between different services</td>
+            <td className={styles.skillDesc}>Written Backend services that perfomed critical tasks related to customers after sale journey. Wrote multiple cron jobs which synced data between different services</td>
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "#5ed3f3" }}>ReactJS</td>
-            <td >Written complex React Application for the logistics operation of TPS Technologies which used multiple 3P APIs</td>
+            <td className={styles.skillDesc}>Written complex React Application for the logistics operation of TPS Technologies which used multiple 3P APIs</td>
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "#95bf47" }}>Shopify <br></br>Ecosystem</td>
-            <td >Used the Shopify Templating Language <a target="_blank" rel="noreferrer" className={styles.link} href="https://shopify.dev/api/liquid">Liquid</a> to develop, improve and maintain features on TPS Technologies</td>
+            <td className={styles.skillDesc}>Used the Shopify Templating Language <a target="_blank" rel="noreferrer" className={styles.link} href="https://shopify.dev/api/liquid">Liquid</a> to develop, improve and maintain features on TPS Technologies</td>
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "yellow" }}>Python</td>
-            <td >Used python to make CLI apps, to improve my problem solving skills and make <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/DeepakR-28/projects">fun projects</a> like movie guessing game and a voice calculator. </td>
+            <td className={styles.skillDesc}>Used python to make CLI apps, to improve my problem solving skills and make <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/DeepakR-28/projects">fun projects</a> like movie guessing game and a voice calculator. </td>
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "#35b4e9" }}>Azure</td>
-            <td >Setup deployment pipelines, Database services, Static Web Apps deployment, Serverless functions, API Uptime Monitoring, RCA, Authentication using Azure AD</td>
+            <td className={styles.skillDesc}>Setup deployment pipelines, Database services, Static Web Apps deployment, Serverless functions, API Uptime Monitoring, RCA, Authentication using Azure AD</td>
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "#00a7d0" }}>Golang</td>
-            <td >Created small <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/DeepakR-28?tab=repositories&q=&type=&language=golang&sort=">backend services </a>which serve data using REST APIs</td>
+            <td className={styles.skillDesc}>Created small <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/DeepakR-28?tab=repositories&q=&type=&language=golang&sort=">backend services </a>which serve data using REST APIs</td>
           </tr>
         </table>
       </div>

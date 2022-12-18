@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../resume.module.css'
 function HelpCommands() {
   return (
+    <>
     <table className={styles.helpTable}>
       <thead>
         <tr className={styles.tableRow}>
@@ -53,6 +54,7 @@ function HelpCommands() {
         </tr>
       </tbody>
     </table>
+    </>
   )
 }
 
