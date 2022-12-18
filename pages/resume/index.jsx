@@ -45,7 +45,8 @@ function Resume() {
         <link rel="icon" href="/profile.jpg" />
       </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NLZM4G1DRJ" strategy="afterInteractive"></Script>
-      <div className={styles.body}>
+      <body className={styles.resumeBody}>
+      <div >
         <p className={styles["deeminal-welcome"]}>Welcome to this smol terminal, let&apos;s get you started.<br></br>Type `help` view a list of commands.</p>
         <div id="command-snapshot" className={styles.snapshot}>
           {pathCommandSnapShot ? (
@@ -55,7 +56,9 @@ function Resume() {
           ) : null}
         </div>
         <Terminal />
-      </div>
+      </div>  
+      </body>
+      
     </React.Fragment>
   );
 }

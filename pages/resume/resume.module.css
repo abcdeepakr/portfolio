@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Source+Code+Pro&display=swap');
-.body{
+#__next::-webkit-scrollbar {
+    display: none;
+  }
+.resumeBody{
     background-color: #121212;
     display: flex;
   flex-direction: column;
@@ -12,10 +15,9 @@
     font-weight: 800;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;
-}
-.body::-webkit-scrollbar {
+    }
+.resumeBody::-webkit-scrollbar {
     display: none;
-    width: 100px;
   }
 .deeminal-welcome{
     font-size: 1rem;
