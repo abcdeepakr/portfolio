@@ -4,6 +4,7 @@ import { AppContext } from '../../../pages/_app'
 import styles from './file.module.css'
 import { ProjectFile } from '../ProjectFiles'
 import { Profiles } from '../profiles'
+import { WorkExperience } from '../work_experience'
 export function FileContent(props) {
   // console.log("indise file content")
   const applicationTerminalContext = useContext(AppContext)
@@ -27,6 +28,11 @@ export function FileContent(props) {
   if (props.file == "why") {
     return (
       <div>I wanted to implement useContext for state management of this website, and hence thought that this terminal resume might be a good place to implement that, as this will require some context switching between previous commands, path and command outputs</div>
+    )
+  }
+  if (props.file == "work_experience") {
+    return (
+      <WorkExperience />
     )
   }
   if (props.file == "interests") {
@@ -60,7 +66,6 @@ export function FileContent(props) {
       </div>
     )
   }
-
   if (props.file == "skills") {
     return (
       <div className={styles.skillsContainer}>

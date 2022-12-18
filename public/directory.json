@@ -1,6 +1,6 @@
 {
     "home": {
-        "why": {
+        "skills": {
             "type": "file"
         },
         "interests": {
@@ -9,7 +9,10 @@
         "education": {
             "type": "file"
         },
-        "skills": {
+        "work_experience": {
+            "type": "file"
+        },
+        "why": {
             "type": "file"
         },
         "type": "directory"
