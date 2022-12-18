@@ -13,6 +13,7 @@ import styles from './resume.module.css'
 import Terminal from './resumeComponents/terminal';
 import TerminalUsername from './resumeComponents/terminalUsername';
 import { AppContext } from '../_app'
+import Image from 'next/image';
 
 function Resume() {
   const applicationTerminalContext = useContext(AppContext)
@@ -36,8 +37,11 @@ function Resume() {
     <React.Fragment >
       <Head>
         <title>Deepak Rawat | Resume</title>
-        <meta name="viewport"
-          content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="description"
+          content="Terminal based Resume" />
+        <meta property="og:title" content="A terminal based resume made with NextJS" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:image" name="Terminal" content="/images/terminal.jpg" />
         <link rel="icon" href="/profile.jpg" />
       </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NLZM4G1DRJ" strategy="afterInteractive"></Script>
