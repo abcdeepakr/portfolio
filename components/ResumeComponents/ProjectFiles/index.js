@@ -2,7 +2,7 @@ import { Dvr } from '@mui/icons-material'
 import React from 'react'
 import styles from './index.module.css'
 export function ProjectFile(props) {
-  console.log(props.projectName)
+  // console.log(props.projectName)
   switch(props.projectName){
     case "vishwall":
       return (

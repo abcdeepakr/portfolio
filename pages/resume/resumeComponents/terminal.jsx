@@ -53,7 +53,7 @@ const Terminal = (props) => {
         return commandInput // returns parsed command
     }
     const updatePathHandler = (command) => {
-        console.log("inside update path handler")
+        // console.log("inside update path handler")
         command = command.replace(/cd| /gi, "")
         let updatedTerminalPath;
         if (!command.startsWith(".")) {
@@ -107,7 +107,7 @@ const Terminal = (props) => {
                 fileFound = findFile(directory[currPath])
             }
             if (fileFound) {
-                console.log("found")
+                // console.log("found")
                 return <FileContent file={currCommand.replace("cat", "")} />
             } else {
                 return <NotFound command={terminalCommand} />
@@ -129,15 +129,15 @@ const Terminal = (props) => {
                 return (<HelpCommands />)
             }
             default:
-                console.log("serving")
-                return (<p style={{ "color": "red" }} className={styles.terminalCommand}>{terminalCommand}:  No such directory/file</p>)
+                // console.log("serving")
+                return ""
         }
     }
     // this function reads the command and executes
     const onKeyDownValue = async (event) => {
         // autofill using tab key
 
-        console.log(event.target.value)
+        // console.log(event.target.value)
         if (event.which == 9) {
             event.preventDefault()
             let responses = []

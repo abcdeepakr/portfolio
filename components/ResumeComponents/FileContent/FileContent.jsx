@@ -5,10 +5,10 @@ import styles from './file.module.css'
 import { ProjectFile } from '../ProjectFiles'
 import { Profiles } from '../profiles'
 export function FileContent(props) {
-  console.log("indise file content")
+  // console.log("indise file content")
   const applicationTerminalContext = useContext(AppContext)
   let currentPath = applicationTerminalContext.state.currentPath
-  console.log("path", currentPath)
+  // console.log("path", currentPath)
   if (props.file == "help") {
     return (
       <div>I&apos;ve always wanted to create a terminal of this style, and hence this is what i decided to create</div>
@@ -20,7 +20,7 @@ export function FileContent(props) {
         Hello, I am Deepak Rawat.<br></br>
         Developer by profession,<br></br>
         Photographer by hobby,<br></br>
-        Hungry since birth<br></br>
+        lame by choice.<br></br>
       </div>
     )
   }
@@ -105,7 +105,7 @@ export function FileContent(props) {
     return <ProjectFile projectName={props.file} />
   }
   if (currentPath[0] == "/profiles") {
-    console.log("opening profile")
+    // console.log("opening profile")
     return <Profiles profileName={props.file} />
   }
 
