@@ -6,6 +6,13 @@
     padding-top: 50px;
     padding-bottom: 50px;
 }
+.backButton{
+  max-width: 768px;
+    margin: auto;
+    overflow: auto;
+    
+    /* padding: 0 10px; */
+}
 .buttonParent{
     display: flex;
     justify-content: center;

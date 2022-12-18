@@ -45,9 +45,12 @@ const Post = ({
     return (
         <div >
             <>
-                <Link href='/blogs'>
-                    <a className='btn btn-back'>back</a>
-                </Link>
+                <div className={styles.backButton}>
+                    <Link href='/blogs'>
+                        <a style={{"fontSize":"2rem"}} className='btn btn-back'>&#x2190;</a>
+                    </Link>
+                </div>
+                
                 {/* <div className='card card-page'> */}
                 <div className={styles.container}>
                     <h1 className={styles.post_title}>{title}</h1>

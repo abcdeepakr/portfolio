@@ -15,7 +15,7 @@ body {
 p {
   margin: 15px 0;
   line-height: 1.8;
-  font-size: 22px;
+  font-size: 1rem;
 }
 
 a {
@@ -104,7 +104,7 @@ header a {
 
 .post-body ul,
 ol {
-  font-size: 110%;
+  font-size: 1rem;
   line-height: 2.3;
   font-weight: bold;
   margin: 10px 0;
