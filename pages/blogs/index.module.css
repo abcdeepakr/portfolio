@@ -20,6 +20,7 @@
 }
 @media only screen and (max-width: 475px) {
     .blogBody{
+      padding: 0px;
         /* display: flex;
         flex-wrap: wrap; */
         /* width: auto;

@@ -59,6 +59,7 @@
         text-decoration:underline;
         font-weight: 400;
         font-size:20px;
+        padding: 10px;
     }
     .excerpt{
         display: none;
