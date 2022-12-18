@@ -126,13 +126,6 @@ ol {
 
 @media (max-width: 500px) {
 
-  p {
-    margin: 15px 0;
-    line-height: 1.8;
-    font-size: 18px;
-    padding: 10px;
-  }
-  
   .posts {
     grid-template-columns: 1fr;
   }

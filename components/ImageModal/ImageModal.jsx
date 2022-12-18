@@ -8,7 +8,7 @@ function ImageModal(props) {
     const handleUserKeyPress = useCallback(event => {
         
         const { key, keyCode } = event;
-        // console.log(keyCode)
+
         if(keyCode == 39){
             nextImage();   
             setKeyCode(keyCode)
@@ -29,20 +29,20 @@ function ImageModal(props) {
     }, [handleUserKeyPress]);
 
     const nextImage = () =>{
-        // console.log(currImageIndex)
+
         if(currImageIndex+1>props.images.length-1){
             
             setCurrImageIndex(0)
         }else{
-            // console.log("INCREMENTING")
+
             let newVal = currImageIndex + 1
-            // console.log(newVal)
+
             setCurrImageIndex(newVal)
         }
         
     }
     const previousImage = () =>{
-        // console.log(currImageIndex)
+
         if(currImageIndex==0){
             setCurrImageIndex(props.images.length-1)    
         } else{
@@ -55,10 +55,10 @@ function ImageModal(props) {
         setCurrImageIndex(0)
     }
     const handleKeyPress = (event) =>{
-        // console.log(event)
+
     }
     if (props.show) {
-        // console.log("shown")
+
         return (
             <div onKeyPress={(e) => handleKeyPress(e)}>
                 <div id="myModal" className={styles.modal} >

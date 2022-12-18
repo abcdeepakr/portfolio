@@ -10,9 +10,9 @@ function About() {
         <React.Fragment>
             <div className ={styles.aboutContainer}>
                 <label className={styles.label}>Previous: </label>
-                <p className={styles.content}>Feedback analyis<h6 className={styles.orgname}>@Ugam Solutions</h6> </p>
+                <p className={styles.content}>Feedback analyis<span className={styles.orgname}> @Ugam Solutions</span> </p>
                 <label className={styles.label}>Current: </label>
-                <p className ={styles.content}>Writing e-commerce solutions <h6 className={styles.orgname}>@The Peripheral Store</h6></p>
+                <p className ={styles.content}>Writing e-commerce solutions <span className={styles.orgname}>@The Peripheral Store</span></p>
                 <label className={styles.label}>Next: </label>
                 <p className ={styles.content}>Your wedding photographer</p>
                 <br></br>

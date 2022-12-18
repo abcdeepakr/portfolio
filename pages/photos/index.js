@@ -19,7 +19,7 @@ function Photos() {
     setLoading(true)
     axios.get('/api/photos')
       .then(response => {
-        // console.log(response.data)
+        
         setImages(response.data)
         setSortedImages(response.data)
         setLoading(false)
@@ -64,7 +64,7 @@ function Photos() {
             return image
           }
         })
-        // console.log("monochrome images : ", sortedMonochromeImages)
+        
         setSortedImages(sortedPeopleImages)
         break
       case "silhouette":
@@ -73,7 +73,7 @@ function Photos() {
             return image
           }
         })
-        // console.log("monochrome images : ", sortedMonochromeImages)
+        
         setSortedImages(sortedSilhouetteImages)
         break
       case "landscape":
@@ -91,7 +91,7 @@ function Photos() {
             return image
           }
         })
-        // console.log("monochrome images : ", sortedMonochromeImages)
+        
         setSortedImages(sortedPortraitImages)
         break
       default:

@@ -1,0 +1,50 @@
+{
+    "home": {
+        "why": {
+            "type": "file"
+        },
+        "interests": {
+            "type": "file"
+        },
+        "education": {
+            "type": "file"
+        },
+        "skills": {
+            "type": "file"
+        },
+        "type": "directory"
+    },
+    "projects": {
+        "vishwall": {
+            "type": "file"
+        },
+        "hindi_wordle": {
+            "type": "file"
+        },
+        "medium_clone_backend": {
+            "type": "file"
+        },
+        "daily_progress": {
+            "type": "file"
+        },
+        "type": "directory"
+    },
+    "profiles": {
+        "github": {
+            "type": "file",
+            "url":"https://github.com/DeepakR-28"
+        },
+        "linkedin": {
+            "type": "file",
+            "url":"https://www.linkedin.com/in/deepakr28/"
+        },
+        "pexels": {
+            "type": "file",
+            "url":"https://www.pexels.com/@deepakrawat/"
+        },
+        "type": "directory"
+    },
+    "about": {
+        "type": "file"
+    }
+}
