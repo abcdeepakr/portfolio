@@ -6,7 +6,8 @@
  * Inserting other the <Terminal /> component which processes all the user inputs
  */
 
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
+import Link from 'next/dist/client/link';
 import Head from 'next/head'
 import Script from 'next/script'
 import styles from './resume.module.css'
@@ -52,7 +53,10 @@ function Resume() {
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NLZM4G1DRJ" strategy="afterInteractive"></Script>
       <>
       <div className={styles.resumeBody}>
-        <p className={styles["deeminal-welcome"]}>Welcome to this smol terminal, let&apos;s get you started.<br></br>Type `help` view a list of commands.</p>
+        <p className={styles["deeminal-welcome"]}>
+          Welcome to this smol terminal, let&apos;s get you started.<br></br>
+          Get the PDF version <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1_D0cJxDRGyjMsGNvU9loWU71JmNoKDP1/view?usp=sharing">Here</a><br></br>
+          Type `help` view a list of commands.</p>
         <div id="command-snapshot" className={styles.snapshot}>
           {pathCommandSnapShot ? (
             pathCommandSnapShot.map((snapshot, index) => {

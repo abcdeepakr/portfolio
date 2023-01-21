@@ -52,6 +52,11 @@ function HelpCommands() {
           <td className={styles.tableData}>Navigate across folders</td>
           <td className={styles.tableData}>`cd ../`</td>
         </tr>
+        <tr className={styles.tableRow}>
+          <td className={styles.tableData}>exit</td>
+          <td className={styles.tableData}>Exit terminal</td>
+          <td className={styles.tableData}>`exit`</td>
+        </tr>
       </tbody>
     </table>
     </>

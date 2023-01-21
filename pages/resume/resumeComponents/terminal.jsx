@@ -8,6 +8,7 @@
 
 import { useState, useContext, useEffect } from 'react';
 import styles from '../resume.module.css'
+import Router , {useRouter}  from 'next/router';
 import { AppContext } from '../../_app'
 import TerminalUsername from './terminalUsername'
 import ListDirectory from './ListDirectory'
@@ -17,7 +18,7 @@ import NotFound from './NotFound';
 import HelpCommands from './HelpCommands'
 const Terminal = (props) => {
     const applicationTerminalContext = useContext(AppContext)
-
+    const router = useRouter()
     const [terminalPath, setTerminalPath] = useState(["/home"])
     const [terminalCommand, setTerminalCommand] = useState("")
     const [commandHistoryIndex, setCommandHistoryIndex] = useState(applicationTerminalContext.state.pathCommandSnapshot.length - 1)
@@ -113,7 +114,7 @@ const Terminal = (props) => {
                 return <NotFound command={terminalCommand} />
             }
         }
-
+        console.log("curr", currCommand)
         switch (currCommand) {
             case "clear": {
                 applicationTerminalContext.dispatchState({ type: "CLEAR_SNAPSHOTS", pathCommand: {} })
@@ -127,6 +128,9 @@ const Terminal = (props) => {
             }
             case "help": {
                 return (<HelpCommands />)
+            }
+            case "exit":{
+                router.push('/')
             }
             default:
                 // console.log("serving")
