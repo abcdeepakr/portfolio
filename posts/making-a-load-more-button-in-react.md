@@ -21,7 +21,7 @@ we will fetch some post/blog data from this endpoint `https://jsonplaceholder.ty
 
 P.S this algorithm can be optimized, would love suggestions in the comments, might update the blog after some optimization.
 
-Github Repo - [Load More](https://github.com/DeepakR-28/load-more)
+Github Repo - [Load More](https://github.com/deepakr-28/load-more)
 
 <hr>
 

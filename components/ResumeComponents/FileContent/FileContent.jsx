@@ -41,7 +41,7 @@ export function FileContent(props) {
         <ul className={styles.list}>
           <li title="ctrl+click to open link in new tab"><a target="_blank" rel="noreferrer" className={styles.link} href="https://www.pexels.com/@deepakrawat/">Photograph Stuff</a></li>
           <li title="ctrl+click to open link in new tab"><a target="_blank" rel="noreferrer" className={styles.link} href="https://deepakr28.com/blogs">Blog Stuff</a></li>
-          <li title="ctrl+click to open link in new tab"><a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/DeepakR-28">Build Stuff</a></li>
+          <li title="ctrl+click to open link in new tab"><a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/deepakr-28">Build Stuff</a></li>
         </ul>
       </div>
     )
@@ -76,7 +76,7 @@ export function FileContent(props) {
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "#f1ce05" }} >JavaScript</td>
-            <td className={styles.skillDesc} >Written multiple features <a target="_blank" rel="noreferrer" className={styles.link} href="https://tpstech.in">@TPS Technologies</a> to improve the capabilities of the Ecommerce platform. Created multiple <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/DeepakR-28?tab=repositories&q=&type=public&language=javascript&sort=">personal projects</a> using Vanilla JS and Reactjs </td>
+            <td className={styles.skillDesc} >Written multiple features <a target="_blank" rel="noreferrer" className={styles.link} href="https://tpstech.in">@TPS Technologies</a> to improve the capabilities of the Ecommerce platform. Created multiple <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/deepakr-28?tab=repositories&q=&type=public&language=javascript&sort=">personal projects</a> using Vanilla JS and Reactjs </td>
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "#73ab60" }}>NodeJs</td>
@@ -92,7 +92,7 @@ export function FileContent(props) {
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "yellow" }}>Python</td>
-            <td className={styles.skillDesc}>Used python to make CLI apps, to improve my problem solving skills and make <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/DeepakR-28/projects">fun projects</a> like movie guessing game and a voice calculator. </td>
+            <td className={styles.skillDesc}>Used python to make CLI apps, to improve my problem solving skills and make <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/deepakr-28/projects">fun projects</a> like movie guessing game and a voice calculator. </td>
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "#35b4e9" }}>Azure</td>
@@ -100,7 +100,7 @@ export function FileContent(props) {
           </tr>
           <tr className={styles.skillCol}>
             <td className={styles.skillName} style={{ "color": "#00a7d0" }}>Golang</td>
-            <td className={styles.skillDesc}>Created small <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/DeepakR-28?tab=repositories&q=&type=&language=golang&sort=">backend services </a>which serve data using REST APIs</td>
+            <td className={styles.skillDesc}>Created small <a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/deepakr-28?tab=repositories&q=&type=&language=golang&sort=">backend services </a>which serve data using REST APIs</td>
           </tr>
         </table>
       </div>
