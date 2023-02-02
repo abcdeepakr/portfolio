@@ -55,7 +55,7 @@ function Resume() {
       <div className={styles.resumeBody}>
         <p className={styles["deeminal-welcome"]}>
           Welcome to this smol terminal, let&apos;s get you started.<br></br>
-          Get the PDF version <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1_D0cJxDRGyjMsGNvU9loWU71JmNoKDP1/view?usp=sharing">Here</a><br></br>
+          Get the PDF version <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1bXZ4_5JweWbxIz0F6HMIBqIzLjAcYJJM/view?usp=sharing">Here</a><br></br>
           Type `help` view a list of commands.</p>
         <div id="command-snapshot" className={styles.snapshot}>
           {pathCommandSnapShot ? (
