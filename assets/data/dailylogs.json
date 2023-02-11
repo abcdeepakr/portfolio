@@ -1,0 +1,27 @@
+[
+  
+  {
+    "id":"3",
+    "date": "Jan 11, 2023",
+    "title": "Integrated my own timeline Library",
+    "content": "Finally integrated my on library that I created a couple of weeks back. I wanted to add that here, but didn't get the time between things. Now that it is here, hopefully I'll add some things about my day here daily, making this an endless timeline"
+  },
+  {
+    "id":"2",
+    "date": "Jan 10, 2023",
+    "title": "Sick",
+    "content": "Didn't get anything done today, was sick, slept the whole day. saw a bad dream that someone took over my non existent company and sidelined me from the day to day activities and took full control over it."
+  },
+  {
+    "id":"1",
+    "date": "Jan 9, 2023",
+    "title": "Work",
+    "content": "Just got some work done, revamped frontend of an internal tool. Also I have throat infection I guess, my throat was really paining in the last few hours of the day"
+  },
+  {
+    "id":"0",
+    "date": "Jan 9, 2023",
+    "title": "init",
+    "content": "Starting off with this small logging thingy for my website, the timeline is built using a custom feature that I create and published as a library that can be found <a href='https://github.com/deepakr-28/boring-component-library/pkgs/npm/boring-component-library'>here</a>"
+  }
+]
