@@ -42,8 +42,7 @@ function Index(props) {
         }
       </Script>
       <div className={styles.blogNav}>
-
-        <div variant="pills" onClick={(e) => selectedBlogCategoryHandler(e)} style={{ width: "20%" }} className={styles.buttonParent}>
+        <div onClick={(e) => selectedBlogCategoryHandler(e)} style={{ width: "20%" }} className={styles.buttonParent}>
           <div style={{ padding: "10px" }}>
             <Button size="lg" variant={selectedBlogCategory === "Perceptions" ? "dark" : "light"} value="Perceptions">Perceptions</Button>{' '}
           </div>
