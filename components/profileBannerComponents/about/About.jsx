@@ -10,15 +10,15 @@ function About() {
         <React.Fragment>
             <div className ={styles.aboutContainer}>
                 <label className={styles.label}>Previous: </label>
-                <p className={styles.content}>Feedback analyis<span className={styles.orgname}> @Ugam Solutions</span> </p>
+                <p className={styles.content}>E-Commerce Solutions <span className={styles.orgname}><Link href="https://tpstech.in">@The Peripheral Store</Link></span> </p>
                 <label className={styles.label}>Current: </label>
-                <p className ={styles.content}>Writing e-commerce solutions <span className={styles.orgname}>@The Peripheral Store</span></p>
+                <p className ={styles.content}>Software Developer<span className={styles.orgname}><Link href={"https://cars24.com"}> @Cars24</Link></span></p>
                 <label className={styles.label}>Next: </label>
                 <p className ={styles.content}>Your wedding photographer</p>
                 <br></br>
                 <br></br>
                 <h3 className={styles.message}>Hello anon | 
-                    <a  href="https://secret.evenjust.com/c85ae4a8c" 
+                    <a  href="https://t.me/deepakr28" 
                                     target="_blank" rel="noreferrer">
                         <MailOutlineIcon fontSize='medium' color="primary" style={{paddingLeft:"2px"}} /> 
                     </a>
