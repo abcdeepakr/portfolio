@@ -6,8 +6,20 @@ export function WorkExperience(){
             <p className={styles.heading}>Work Experience</p>
             <div>
                 <div className={styles.company_details}>
+                    <p className={styles.companyName}>Cars24 - Software Developer</p>
+                    <p className={styles.duration}>Apr 2023-Present</p>
+                </div>
+                <div className={styles.contribution}>
+                    <ul>
+                        <li>Joined as a Frontend Developer (React)</li>
+                        <li>Working on monorepo architecture with Nx</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div className={styles.company_details}>
                     <p className={styles.companyName}>The Peripheral Store - Software Developer</p>
-                    <p className={styles.duration}>Jul 2021-Present</p>
+                    <p className={styles.duration}>Jul 2021-Apr 2023</p>
                 </div>
                 <div className={styles.contribution}>
                     <ul>
