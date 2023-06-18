@@ -15,11 +15,11 @@ function Photos() {
   const [images, setImages] = useState([])
   const [sortedImages, setSortedImages] = useState([])
   const [loading, setLoading] = useState(false)
+  console.log(images)
   useEffect(() => {
     setLoading(true)
     axios.get('/api/photos')
       .then(response => {
-        
         setImages(response.data)
         setSortedImages(response.data)
         setLoading(false)
@@ -39,13 +39,19 @@ function Photos() {
 
   }
 
+  const isDocumentationImage = (tags) => {
+    return tags.includes("documentation") ? true : false
+  }
   const sortImages = (filterType) => {
     switch (filterType) {
       case "monochrome":
         let sortedMonochromeImages = [...images].filter(image => {
-          if (image.tags.includes("monochrome")) {
-            return image
+          if(!isDocumentationImage(image.tags)){
+            if (image.tags.includes("monochrome")) {
+              return image
+            }  
           }
+          
         })
         setSortedImages(sortedMonochromeImages)
         break

@@ -1,5 +1,7 @@
 import React,{useState, useEffect, useCallback} from 'react'
 import styles from './ImageModal.module.css'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 function ImageModal(props) {
 
     const[currImageIndex, setCurrImageIndex] = useState(0)
@@ -64,9 +66,9 @@ function ImageModal(props) {
                 <div id="myModal" className={styles.modal} >
                     
                     <span className={styles.close} onClick={() => closeModal()}>&times;</span> {/* CLOSE MODAL*/}
-                    <span className={styles.left} onClick={()=>previousImage()}>&#10094;</span> {/* LEFT */}
+                    <span className={styles.left} onClick={()=>previousImage()}><ChevronLeftIcon fontSize="200px" /></span> {/* LEFT */}
                     <img className={styles.modal_content} id="img01" alt="modal" src={currImageIndex ? props.images[currImageIndex].url : props.imageData.url}/>
-                    <span className={styles.right} onClick={()=>nextImage()} >&#10095;</span> {/* RIGHT */}
+                    <span className={styles.right} onClick={()=>nextImage()} >< ChevronRightIcon fontSize="200" /></span> {/* RIGHT */}
                     <div id="caption"></div>
                 </div>
             </div>

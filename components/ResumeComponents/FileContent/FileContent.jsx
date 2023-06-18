@@ -10,12 +10,12 @@ export function FileContent(props) {
   const applicationTerminalContext = useContext(AppContext)
   let currentPath = applicationTerminalContext.state.currentPath
   // console.log("path", currentPath)
-  if (props.file == "help") {
+  if (props.file == "help.txt") {
     return (
       <div>I&apos;ve always wanted to create a terminal of this style, and hence this is what i decided to create</div>
     )
   }
-  if (props.file == "about") {
+  if (props.file == "about.txt") {
     return (
       <div className={styles.sentence}>
         Hello, I am Deepak Rawat.<br></br>
@@ -25,17 +25,17 @@ export function FileContent(props) {
       </div>
     )
   }
-  if (props.file == "why") {
+  if (props.file == "why.txt") {
     return (
       <div>I wanted to implement useContext for state management of this website, and hence thought that this terminal resume might be a good place to implement that, as this will require some context switching between previous commands, path and command outputs</div>
     )
   }
-  if (props.file == "work_experience") {
+  if (props.file == "work_experience.txt") {
     return (
       <WorkExperience />
     )
   }
-  if (props.file == "interests") {
+  if (props.file == "interests.txt") {
     return (
       <div>
         <ul className={styles.list}>
@@ -46,7 +46,7 @@ export function FileContent(props) {
       </div>
     )
   }
-  if (props.file == "education") {
+  if (props.file == "education.txt") {
     return (
       <div>
         <p className={styles.institution}>
@@ -66,7 +66,7 @@ export function FileContent(props) {
       </div>
     )
   }
-  if (props.file == "skills") {
+  if (props.file == "skills.txt") {
     return (
       <div className={styles.skillsContainer}>
         <table >

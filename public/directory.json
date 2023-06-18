@@ -1,47 +1,47 @@
 {
     "home": {
-        "skills": {
+        "skills.txt": {
             "type": "file"
         },
-        "interests": {
+        "interests.txt": {
             "type": "file"
         },
-        "education": {
+        "education.txt": {
             "type": "file"
         },
         "work_experience": {
             "type": "file"
         },
-        "why": {
+        "why.txt": {
             "type": "file"
         },
         "type": "directory"
     },
     "projects": {
-        "vishwall": {
+        "vishwall.txt": {
             "type": "file"
         },
-        "hindi_wordle": {
+        "hindi_wordle.txt": {
             "type": "file"
         },
-        "medium_clone_backend": {
+        "medium_clone_backend.txt": {
             "type": "file"
         },
-        "daily_progress": {
+        "daily_progress.txt": {
             "type": "file"
         },
         "type": "directory"
     },
     "profiles": {
-        "github": {
+        "github.txt": {
             "type": "file",
             "url":"https://github.com/deepakr-28"
         },
-        "linkedin": {
+        "linkedin.txt": {
             "type": "file",
             "url":"https://www.linkedin.com/in/deepakr28/"
         },
-        "pexels": {
+        "pexels.txt": {
             "type": "file",
             "url":"https://www.pexels.com/@deepakrawat/"
         },

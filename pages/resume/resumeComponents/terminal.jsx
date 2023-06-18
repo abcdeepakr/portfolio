@@ -68,7 +68,7 @@ const Terminal = (props) => {
                 return null
             }
         }
-        if(command == "../"){
+        if(command == "../" || command == ".." ){
             updatedTerminalPath = [...terminalPath]
             updatedTerminalPath.pop()
             setTerminalPath(updatedTerminalPath)   
