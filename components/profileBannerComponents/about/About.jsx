@@ -20,7 +20,7 @@ function About() {
                 <h3 className={styles.message}>Hello anon | 
                     <a  href="https://t.me/deepakr28" 
                                     target="_blank" rel="noreferrer">
-                        <MailOutlineIcon stroke-width={10} fontSize='medium' color="primary" style={{paddingLeft:"2px"}} /> 
+                        <MailOutlineIcon strokeWidth={10} fontSize='medium' color="primary" style={{paddingLeft:"2px"}} /> 
                     </a>
                 </h3>
                 

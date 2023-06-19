@@ -1,8 +1,6 @@
 import React from 'react'
 import { Navbar, NavDropdown, Nav, Container } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from 'next/link'
-
 import styles from './navbar.module.css'
 const NavbarComponent = () => {
     return (
