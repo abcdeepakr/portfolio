@@ -1,7 +1,7 @@
 ---
 title: "Father's Day"
 date: 'Jun 21, 2020'
-excerpt: 'Something that will remain in the archives'
+excerpt: 'mustering courage to send this'
 cover_image: '/images/contentImages/fathersday.jpg'
 area: 'perceptionss'
 ---

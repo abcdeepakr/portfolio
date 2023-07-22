@@ -10,7 +10,7 @@
 .content{
     padding-left: 40px;
     font-family: "Inter var", "Inter", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
 }
 .orgname{
     color: #eb3b5a;
@@ -20,7 +20,7 @@
 .message{
     cursor: pointer;
     color: black;
-    font-size: 18px;
+    font-size: 16px;
     /* font-weight: 600; */
     /* font-family: "Inter var", "Inter", sans-serif; */
 }

@@ -1,7 +1,7 @@
 ---
 title: "Shubbu-baazi"
 date: 'Dec 28, 2022'
-excerpt: 'Something that will remain in the archives'
+excerpt: 'hui hui hui'
 cover_image: ''
 area: 'perceptions'
 ---

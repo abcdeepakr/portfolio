@@ -39,7 +39,7 @@ export function FileContent(props) {
     return (
       <div>
         <ul className={styles.list}>
-          <li title="ctrl+click to open link in new tab"><a target="_blank" rel="noreferrer" className={styles.link} href="https://www.pexels.com/@deepakrawat/">Photograph Stuff</a></li>
+          <li title="ctrl+click to open link in new tab"><a target="_blank" rel="noreferrer" className={styles.link} href="https://www.pexels.com/@eggroll/">Photograph Stuff</a></li>
           <li title="ctrl+click to open link in new tab"><a target="_blank" rel="noreferrer" className={styles.link} href="https://deepakr28.com/blogs">Blog Stuff</a></li>
           <li title="ctrl+click to open link in new tab"><a target="_blank" rel="noreferrer" className={styles.link} href="https://github.com/deepakr-28">Build Stuff</a></li>
         </ul>
