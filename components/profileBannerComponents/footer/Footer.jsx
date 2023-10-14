@@ -13,10 +13,10 @@ import Link from '@mui/material/Link';
 function Footer() {
     return (
         <div className ={styles.iconContainer}>
-            <div className ={styles.icon}><Link href="https://www.instagram.com/deepak.r28/" target="_blank"><InstagramIcon className={styles.iconStyling}/></Link></div>
-            <div className ={styles.icon}><Link href="https://twitter.com/steewtpeed" target="_blank"><TwitterIcon className={styles.iconStyling}/></Link></div>
-            <div className ={styles.icon}><Link href="https://github.com/deepakr-28" target="_blank"><GitHubIcon className={styles.iconStyling}/></Link></div>
-            <div className ={styles.icon}><Link href="https://www.linkedin.com/in/deepak-rawat-883138168/" target="_blank"><LinkedInIcon className={styles.iconStyling}/></Link></div>
+            <div className ={styles.icon}><Link href="https://www.instagram.com/abcdeepakr" target="_blank"><InstagramIcon className={styles.iconStyling}/></Link></div>
+            <div className ={styles.icon}><Link href="https://twitter.com/abcdeepakr" target="_blank"><TwitterIcon className={styles.iconStyling}/></Link></div>
+            <div className ={styles.icon}><Link href="https://github.com/abcdeepakr" target="_blank"><GitHubIcon className={styles.iconStyling}/></Link></div>
+            <div className ={styles.icon}><Link href="https://www.linkedin.com/in/abcdeepakr" target="_blank"><LinkedInIcon className={styles.iconStyling}/></Link></div>
             
             
             

@@ -126,6 +126,11 @@ ol {
     color: whitesmoke;
   }
   
+.card {
+  border-radius: 0px;
+  box-shadow: none;
+}
+
 
 }
 
@@ -134,7 +139,6 @@ ol {
 @media (max-width: 1000px) {
 
   .btn-back {
-    background: #212529;
     color: #000;
     margin-bottom: 20px;
     display: inline-block;

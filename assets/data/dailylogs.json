@@ -22,6 +22,6 @@
     "id":"0",
     "date": "Jan 9, 2023",
     "title": "init",
-    "content": "Starting off with this small logging thingy for my website, the timeline is built using a custom feature that I create and published as a library that can be found <a href='https://github.com/deepakr-28/boring-component-library/pkgs/npm/boring-component-library'>here</a>"
+    "content": "Starting off with this small logging thingy for my website, the timeline is built using a custom feature that I create and published as a library that can be found <a href='https://github.com/abcdeepakr/boring-component-library/pkgs/npm/boring-component-library'>here</a>"
   }
 ]

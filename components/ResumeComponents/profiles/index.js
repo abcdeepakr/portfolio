@@ -3,7 +3,7 @@ export function Profiles(props) {
     case "github.txt":
       console.log("opening")
       // window.open("", '_blank');
-      return (<p style={{"fontSize": "1rem"}}><a style={{"color": "aqua"}} href="https://github.com/deepakr-28" target="_blank" rel="noreferrer">Click here to open GitHub profile</a><br></br></p>)
+      return (<p style={{"fontSize": "1rem"}}><a style={{"color": "aqua"}} href="https://github.com/abcdeepakr" target="_blank" rel="noreferrer">Click here to open GitHub profile</a><br></br></p>)
     case "linkedin.txt":
       // window.open("https://www.linkedin.com/in/deepakr28/", '_blank');
       return (<p style={{"fontSize": "1rem"}}><a style={{"color": "aqua"}} href="https://www.linkedin.com/in/deepakr28/" target="_blank" rel="noreferrer">Click here to open Linkedin profile</a><br></br></p>)
