@@ -163,3 +163,7 @@ header a {
     grid-template-columns: 1fr;
   }
 } */
+
+.post-body-image{
+  width: 50%;
+}
