@@ -13,12 +13,12 @@ const NavbarComponent = () => {
                         <Nav className="me-auto">
                         </Nav>
                         <Nav >
-                            <Link  href="/" passHref  ><p className = {styles.links}>Home</p></Link>
-                            <Link  href="/blogs" passHref><p className = {styles.links}>Blog</p></Link>
-                            <Link eventKey={2} href="/photos" passHref>
+                            <Link eventKey="1"  href="/" passHref  ><p className = {styles.links}>Home</p></Link>
+                            <Link eventKey="2"  href="/blogs" passHref><p className = {styles.links}>Blog</p></Link>
+                            <Link eventKey="3" href="/photos" passHref>
                             <p className = {styles.links}>Photos</p>
                             </Link>
-                            <Link href="/resume" passHref>
+                            <Link eventKey="4" href="/resume" passHref>
                                 <p className={styles.links}>
                                     Resume
                                 </p>
